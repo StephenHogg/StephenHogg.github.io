@@ -12,8 +12,6 @@ relative_links:
   enabled: true
   collections: true
 
-minima:
-  date_format: "%b %-d, %Y"
-  social_links:
-    twitter: whistle_posse
-    github: StephenHogg
+date_format: "%b %-d, %Y"
+twitter_username: whistle_posse
+github_username: StephenHogg

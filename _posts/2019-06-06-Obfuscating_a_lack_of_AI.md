@@ -3,7 +3,7 @@ layout: post
 title: "How to obfuscate the fact that you're not really doing AI"
 ---
 
-Oh my god this happens all the time I swear. What I'm talking about here is the thing where you build a model and think it works, but if you look closer it's actually doing almost nothing. This post looks at a few dead giveaways and traps you (or better yet, someone else), can fall into.
+Oh my god this happens all the time I swear. What I'm talking about here is the thing where you build a model and think it works, but if you look closer it's actually doing almost nothing. This post looks at a common yet (in my opinion) not widely discussed trap you (or better yet, someone else), can fall into.
 
 ## Even simple models can stuff up
 
@@ -26,7 +26,7 @@ In the case I described above, what had happened was that the model was trained 
 |Has product | 125 | 0 |
 |Doesn't have product | 20 | 50 |
 
-Any time you see a sample with the *HAS_PRODUCT* flag, why wouldn't you predict they churn? It's a one-way bet.
+Any time you see a sample with the **HAS_PRODUCT** flag, why wouldn't you predict they churn? It's a one-way bet.
 
 This is a really clear-cut case, unfortunately this can still happen in slightly less obvious circumstances. In the link at the start of this section, they talk about a case of exact separation with a continuous instead of binary variable. Similarly, even if the 0 in that confusion matrix was a 2 or a 5 you'd still have the problem. This can also kick in if there's a combination of variables that exactly splits your labels. 
 
@@ -40,8 +40,12 @@ Now it's time for a quick FAQ on what we've learned!
 
 ### How will I know?[^1]
 
+The obvious thing is to run that confusion matrix for every categorical variable you've got and look for any that have a cell with barely any observations as a percentage of the total. You might also consider looking at a covariance matrix or two. The other thing you can do is just run your model and look for the signs that it has gone wrong. Remember, there are a few giveaways.
 
+1. One of the coefficients is orders of magnitude bigger than the others and the standard errors are massive because the model hasn't really converged
+2. Some of your predictions are almost exactly zero or one - there should almost never be a reason for a model to be THAT confident
 
+This is almost surely going to happen to you at some point, if it hasn't already. Good luck with that haha.
 
 
 [^1]: Ok fine, this is a Soundgarden joke.

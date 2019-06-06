@@ -30,10 +30,6 @@ Here's a small table with accuracy stats for a few corpora from the Universal De
 | UD_Vietnamese-VTB    | 79.5 | **87.7** |
 | UD_Indonesian-GSD     | 93.7     |  **96.6**  |
 
-For the record, the architecture options used for the CoreNLP models were:
-
-GET ARCH AND INSERT HERE
-
 The more interesting thing than the details of these particular models is that they are outperforming the LSTM-based approach. That is, they're both (heaps) faster and more accurate for this task using this dataset. Yes, this approach doesn't consider every possible language, but hopefully with a few languages the point is already coming across.
 
 So now what?

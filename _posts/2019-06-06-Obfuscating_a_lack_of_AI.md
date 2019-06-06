@@ -21,7 +21,7 @@ In the course of a few months' worth of trying to alert people to this, I realis
 
 In the case I described above, what had happened was that the model was trained on a dataset that _contained no examples of a customer not churning and also not having that one product_. So maximum likelihood estimation takes that and runs with it and you wind up with a model that's ridiculously oversensitive to this one variable. The confusion matrix shows this more clearly:
 
-| churn | no churn |
+ | churn | no churn |
 Has product | 125 | 0 |
 Doesn't have product | 20 | 50 |
 

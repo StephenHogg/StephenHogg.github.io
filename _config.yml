@@ -1,3 +1,4 @@
+title: Oh no
 author: Stephen Hogg
 email: saenet.r@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -22,6 +23,7 @@ include:
   - PULL_REQUEST_TEMPLATE.md
   - Transformers_part1.md
 minima:
+  date_format: "%b %-d, %Y"
   social_links:
     twitter: whistle_posse
     github: StephenHogg

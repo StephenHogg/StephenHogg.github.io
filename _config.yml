@@ -6,7 +6,7 @@ description: >
 author: Stephen Hogg
 email: saenet.r@gmail.com
 show_excerpts: true # set to true to show excerpts on the homepage
-header_pages: ['']
+header_pages: ['about.md']
 
 theme: minima
 plugins:

@@ -1,4 +1,8 @@
-# Transformers: more than meets the eye? (Part 1: The Past)
+---
+layout: post
+title: "Transformers: more than meets the eye? (Part 1: The Past)"
+---
+
 There's quite a lot of talk about how wonderful Transformers are and how they solve a lot of problems. Fair enough, they are pretty good. That said, all the explanations I've seen so far include math and neural network diagrams (nothing wrong with that!). What I'm going to attempt to do is talk about how they work in a more conceptual way, because it's much easier to understand the math and diagrams if you have some idea of why those equations even exist.
 
 In this post I'll attempt to walk through the history that got us to the point where Transformers (the neural network technique, for clarity), seemed like a good idea. There are a couple of things we'll need to think about:

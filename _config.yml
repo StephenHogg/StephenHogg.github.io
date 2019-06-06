@@ -1,7 +1,6 @@
 author: Stephen Hogg
 email: saenet.r@gmail.com
-twitter: whistle_posse
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
 
 theme: minima
 plugins:

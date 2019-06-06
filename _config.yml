@@ -1,3 +1,10 @@
+author: Stephen Hogg
+email: saenet.r@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Stuff that I thought of and want to write down goes here. Things I 
+  need to remember go here, too. 
+show_excerpts: false # set to true to show excerpts on the homepage
+
 theme: jekyll-theme-slate
 plugins:
   - jekyll-relative-links

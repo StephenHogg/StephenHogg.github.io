@@ -47,5 +47,7 @@ The obvious thing is to run that confusion matrix for every categorical variable
 
 This is almost surely going to happen to you at some point, if it hasn't already. Good luck with that haha.
 
+I bet at least a few start-ups have got models that are really doing this under the hood. 
+
 
 [^1]: Ok fine, this is a Soundgarden joke.

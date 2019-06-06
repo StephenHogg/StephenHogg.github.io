@@ -15,3 +15,7 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
   - Transformers_part1.md
+slate:
+  social_links:
+    twitter: whistle_posse
+    github: StephenHogg

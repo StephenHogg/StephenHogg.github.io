@@ -1,4 +1,7 @@
-% Two Cheers for StanfordNLP!
+---
+layout: post
+title: "Two Cheers for StanfordNLP!"
+---
 
 As you may or may not know, the [Universal Dependencies Github repo] is an absolutely wonderful source of tagged NLP data that can be used for a wide variety problems. It's worth reinforcing, it's a great resource and an example to us all about where academic collaboration can lead.
 

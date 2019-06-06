@@ -25,7 +25,7 @@ For the purposes of this discussion, let's focus on POS (part of speech) tagging
 
 Here's a small table with accuracy stats for a few corpora from the Universal Dependencies repo.
 
-| Corpus        | Pytorch           | CoreNLP  |
+| Corpus        | PyTorch           | CoreNLP  |
 | ------------- |:-------------:| -----:|
 | UD_Vietnamese-VTB    | 79.5 | **87.7** |
 | UD_Indonesian-GSD     | 93.7     |  **96.6**  |

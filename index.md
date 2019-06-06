@@ -1,4 +1,4 @@
-Oh my god
+<p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile </a><br><a href="https://twitter.com/whistle_posse">View My Twitter Profile </a></p>
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

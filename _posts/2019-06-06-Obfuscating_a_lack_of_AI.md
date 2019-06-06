@@ -30,9 +30,12 @@ Any time you see a sample with the *HAS_PRODUCT* flag, why wouldn't you predict 
 
 This is a really clear-cut case, unfortunately this can still happen in slightly less obvious circumstances. In the link at the start of this section, they talk about a case of exact separation with a continuous instead of binary variable. Similarly, even if the 0 in that confusion matrix was a 2 or a 5 you'd still have the problem. This can also kick in if there's a combination of variables that exactly splits your labels. 
 
-The most obvious knee-jerk reaction is to regularise your model, but that's a band-aid. Really the data is the problem. And potentially the fact that you're using a maximum likelihood technique. But that's a matter for a separate rant some other time.
+The most obvious knee-jerk reaction is to regularise your model, but that's a band-aid. Really the data is the problem. And potentially the fact that you're using a maximum likelihood technique. But that's a matter for a separate rant some other time. 
+
+Now it's time for a quick FAQ on what we've learned!
 
 > Q: My neural network doesn't have that problem
+>
 > A: Yes it does. If you've got separation problems in your data, then you're still stuffed.
 
 ### How will I know?[^1]

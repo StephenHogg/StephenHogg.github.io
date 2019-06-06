@@ -3,7 +3,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](Transformers_part1.md).
 
-[Link to another page](2019-05-25-Two_Cheers_for_Stanfordnlp.md).
+[Link to another page](_posts/2019-05-25-Two_Cheers_for_Stanfordnlp.MARKUP).
+
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.

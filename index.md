@@ -2,7 +2,7 @@
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page](Transformers_part1.md).
 
 There should be whitespace between paragraphs.
 

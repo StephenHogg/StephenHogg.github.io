@@ -1,4 +1,4 @@
-theme: minima
+theme: jekyll-theme-slate
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
@@ -15,7 +15,7 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
   - Transformers_part1.md
-minima:
+jekyll-theme-slate:
   social_links:
     twitter: whistle_posse
     github: StephenHogg

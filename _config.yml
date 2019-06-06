@@ -1,27 +1,17 @@
-title: Oh no
 author: Stephen Hogg
 email: saenet.r@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Oh no 
+twitter: whistle_posse
 show_excerpts: false # set to true to show excerpts on the homepage
 
 theme: minima
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
+  - jekyll-feed
 relative_links:
   enabled: true
   collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
-  - Transformers_part1.md
+
 minima:
   date_format: "%b %-d, %Y"
   social_links:

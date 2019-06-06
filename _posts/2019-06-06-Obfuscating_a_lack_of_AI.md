@@ -38,7 +38,7 @@ Now it's time for a quick FAQ on what we've learned!
 >
 > A: Yes it does. If you've got separation problems in your data, then you're still stuffed.
 
-### How will I know?[^1]
+### How would I know?[^1]
 
 The obvious thing is to run that confusion matrix for every categorical variable you've got and look for any that have a cell with barely any observations as a percentage of the total. You might also consider looking at a covariance matrix or two. The other thing you can do is just run your model and look for the signs that it has gone wrong. Remember, there are a few giveaways.
 

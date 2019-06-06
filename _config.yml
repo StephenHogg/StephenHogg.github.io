@@ -1,11 +1,10 @@
 author: Stephen Hogg
 email: saenet.r@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Stuff that I thought of and want to write down goes here. Things I 
-  need to remember go here, too. 
+  Oh no 
 show_excerpts: false # set to true to show excerpts on the homepage
 
-theme: jekyll-theme-slate
+theme: minima
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
@@ -22,7 +21,7 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
   - Transformers_part1.md
-jekyll-theme-slate:
+minima:
   social_links:
     twitter: whistle_posse
     github: StephenHogg

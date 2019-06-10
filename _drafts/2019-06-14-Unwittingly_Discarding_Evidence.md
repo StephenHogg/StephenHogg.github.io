@@ -48,6 +48,6 @@ This shouldn't be news to anyone from a scientific background. But we aren't all
 
 [^1]: of course
 [^2]: ...[morning glory](https://www.youtube.com/watch?v=Wm54XyLwBAk)
-[^3]: The reason for doing this is that _you are not your code_. Try to keep some mental distance from your code and models, it will help you think more freely about them.
+[^3]: The reason for doing this is that _you are not your code_. Keeping some mental distance from your code and models can help you think more freely about them.
 [^4]: Being able to spot yourself doing this and act is the hard part. In all seriousness, have a look at some cognitive behavioural therapy material. It's not just for depressed people, it can help you work more effectively with your internal monologue and state of mind and not let this sort of thing slide through.
 [^5]: If you've succeeded in building a model like this, well done. But are you sure you succeeded because you had the right approach? There might be cases where you explicitly do want to build a model to replicate some easily-understood process or object - was that so in your case, or is it the case that thinking that having an overarching narrative was the key to success is actually a narrative fallacy? That's how pervasive this sort of thing can be. 

@@ -15,7 +15,7 @@ When building a model it's easy to get caught in a narrative fallacy. This was d
 
 The problem is, this is really pervasive. And like any kind of absolutely normal background noise, it can sometimes to be hard to spot and focus on.
 
-# asdfafd
+# Thinking is hard
 
 Fair enough. Machine learning models can be big complicated things, so knowing what's going on in them is an active field of research in its own right, not just an onerous task for the practitioner. The easiest way to catch yourself succumbing to a narrative fallacy is if you ever say _"I know what's going on here"_, or words to that effect to yourself. This is because if you're saying that you're potentially focussing on the rare delight of being right, as opposed to sticking to the task of working out what you still don't know. Try getting into the habit of saying that without referring to yourself and see how it changes your view.[^3]
 
@@ -23,7 +23,7 @@ I don't think any less of anyone for thinking like this to be honest, large part
 
 [AutoML seems like a good way around this problem, but in my opinion it's an iron law that in any situation a sufficiently innovative and eager person can always find a way to shoot themselves in the foot. So it isn't a way around these pitfalls, in my view.]()
 
-The other textbook-definition narrative fallacy I see _absolutely everywhere_ consists of pretending your neural network functions the same way as a human brain does. When it inevitably doesn't - because it is in fact not a human brain - all of a sudden the practitioner immediately don't know what to do because their whole frame of reference just became invalid. Stop doing this! Of course there are plenty of very, very smart people who use the human brain analogy to educate others about how neural nets work, but that doesn't mean you should think about it that way when building one yourself. Remember, it's an oversimplification used for the purposes of education.
+A textbook-definition narrative fallacy I see _everywhere_ consists of pretending your neural network functions the same way as a human brain and consequently believing that if you replicate your own decision-making process in constructing the network then all will be well. When it inevitably blows up temporarily - because it is in fact not a human brain - all of a sudden you immediately don't know what to do because that it just became obvious that that whole frame of reference isn't as apt as it seems. Stop doing this![^5] Of course there are plenty of very, very smart people who use the human brain analogy to educate others about how neural nets work, but that doesn't mean you should think about it that way when building one yourself. Remember, it's an oversimplification used for the purposes of education.
 
 # Baby steps
 
@@ -40,7 +40,7 @@ If you make three changes to a model, train it, then find the results are better
 
 This shouldn't be news to anyone from a scientific background. But we aren't all, are we?
 
-# One more thing
+
 
 
 
@@ -50,3 +50,4 @@ This shouldn't be news to anyone from a scientific background. But we aren't all
 [^2]: ...[morning glory](https://www.youtube.com/watch?v=Wm54XyLwBAk)
 [^3]: The reason for doing this is that _you are not your code_. Try to keep some mental distance from your code and models, it will help you think more freely about them.
 [^4]: Being able to spot yourself doing this and act is the hard part. In all seriousness, have a look at some cognitive behavioural therapy material. It's not just for depressed people, it can help you work more effectively with your internal monologue and state of mind and not let this sort of thing slide through.
+[^5]: If you've succeeded in building a model like this, well done. But are you sure you succeeded because you had the right approach? There might be cases where you explicitly do want to build a model to replicate some easily-understood process or object - was that so in your case, or is it the case that thinking that having an overarching narrative was the key to success is actually a narrative fallacy? That's how pervasive this sort of thing can be. 

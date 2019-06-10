@@ -21,3 +21,14 @@ date_format: "%b %-d, %Y"
 twitter_username: whistle_posse
 github_username: StephenHogg
 linkedin_username: stephen-hogg-80109372
+
+defaults:
+  scope:
+    path: _drafts
+  values:
+    layout: post
+    comments: false
+
+collections:
+  drafts:
+    output: true

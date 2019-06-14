@@ -21,7 +21,7 @@ Basically, LDA seeks to create a link between the words that are present in the 
 
 The other piece of information LDA needs to work relates to the topics themselves. Specifically, how narrowly defined are they? Do you only need one or two words to establish the presence of a topic in a document, or more?
 
-# Confused yet?
+[Confused yet?](#confused-yet)
 
 Ok, so you have two parameters to think about when searching for topics with LDA - one that governs how many topics and one that governs whether topics are narrowly or broadly defined. Now how do we tell which values are good?
 

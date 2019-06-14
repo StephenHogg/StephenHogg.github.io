@@ -37,7 +37,7 @@ A textbook-definition narrative fallacy I see _everywhere_ consists of pretendin
 
 One simple thing you can do to avoid falling for narrative fallacies is to slow down the process. I get it, your boss is an arsehole and you have to keep it moving. What I'm saying is that if you're caught in a narrative fallacy, there can often be a strong urge to make multiple changes to your model at the same time, interpret whatever evidence you get as confirmation of the working hypothesis you had and then repeat this process. Again, this can be made worse by the rancid breath of your boss on your neck.
 
-Even worse, the real danger is that as a result of this you wind up going around and around in circles trying to build a model without realising it due to a lack of clarity about the reasons for the effectiveness or otherwise of the changes you make. Or you can wind up going round and round in circles, only to find a way out of it by means of another fallacious narrative that conveniently explains everything (but isn't actually right). Occam's Razor is pretty clear that sometimes the simple explanation can be the wrong one.
+Even worse, the real danger is that you wind up going around and around in circles without realising it due to a lack of clarity about the reasons for the effectiveness or otherwise of the changes you make, or in the worst case a lack of clarity about what you've even tried. Or you can wind up going round and round in circles, only to find a way out of it by means of another fallacious narrative that conveniently explains everything (but isn't actually right). Occam's Razor is pretty clear that sometimes the simple explanation can be the wrong one.
 
 Instead, force yourself to make only one change at a time. This does two things for you:
 

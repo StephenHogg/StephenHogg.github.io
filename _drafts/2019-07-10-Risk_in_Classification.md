@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rethinking classifier assessment"
+title: "Thoughts on how to assess model performance against a subjective problem"
 ---
 
 Models in production are software, so why don't we think about how badly they might perform?

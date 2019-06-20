@@ -1,6 +1,6 @@
----
+<!-- ---
 title: "About me"
----
+--- -->
 
 I'm Stephen and I live in Sydney. I'm the head of ML at [iSentia](http://www.isentia.com), but used to be an economist and before that an aspiring interpreter. Life is funny like that sometimes.
 

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "How to obfuscate the fact that you're not really doing AI"
+image: "/assets/img/D07CcPPXcAAKU5L.png"
 ---
 
-<img src="/D07CcPPXcAAKU5L.png" width="800" />
+<img src="/assets/img/D07CcPPXcAAKU5L.png" width="800" />
 
 Oh my god this happens all the time I swear. What I'm talking about here is the thing where you build a model and think it works, but if you look closer it's actually doing almost nothing. This post looks at a common yet (in my opinion) not widely discussed trap you (or better yet, someone else), can fall into.
 

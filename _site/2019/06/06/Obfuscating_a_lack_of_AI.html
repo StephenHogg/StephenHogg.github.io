@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to obfuscate the fact that you’re not really doing AI | It definitely worked on my computer</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to obfuscate the fact that you’re not really doing AI" />
+<meta name="author" content="Stephen Hogg" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog contains wild-eyed rants and things that I need to write down somewhere. Obviously, the views expressed here are my own." />
+<meta property="og:description" content="This blog contains wild-eyed rants and things that I need to write down somewhere. Obviously, the views expressed here are my own." />
+<link rel="canonical" href="http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html" />
+<meta property="og:url" content="http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html" />
+<meta property="og:site_name" content="It definitely worked on my computer" />
+<meta property="og:image" content="http://localhost:4000/assets/img/D07CcPPXcAAKU5L.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-06T00:00:00+10:00" />
+<script type="application/ld+json">
+{"description":"This blog contains wild-eyed rants and things that I need to write down somewhere. Obviously, the views expressed here are my own.","author":{"@type":"Person","name":"Stephen Hogg"},"@type":"BlogPosting","url":"http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html","image":"http://localhost:4000/assets/img/D07CcPPXcAAKU5L.png","headline":"How to obfuscate the fact that you’re not really doing AI","dateModified":"2019-06-06T00:00:00+10:00","datePublished":"2019-06-06T00:00:00+10:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="It definitely worked on my computer" /><!-- Twitter cards -->
+    <meta name="twitter:site" content="@whistle_posse">
+    <meta name="twitter:creator" content="@whistle_posse">
+
+    
+    <meta name="twitter:title" content="How to obfuscate the fact that you're not really doing AI">
+    
+
+    
+    <meta name="twitter:description" content="This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+">
+    
+
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/D07CcPPXcAAKU5L.png">
+    
+    <!-- end of Twitter cards -->
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">It definitely worked on my computer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How to obfuscate the fact that you&#39;re not really doing AI</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-06T00:00:00+10:00" itemprop="datePublished">Jun 6, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/img/D07CcPPXcAAKU5L.png" width="800" /></p>
+
+<p>Oh my god this happens all the time I swear. What I’m talking about here is the thing where you build a model and think it works, but if you look closer it’s actually doing almost nothing. This post looks at a common yet (in my opinion) not widely discussed trap you (or better yet, someone else), can fall into.</p>
+
+<h2 id="even-simple-models-can-stuff-up">Even simple models can stuff up</h2>
+
+<p>Once upon a time I saw a logit model that was built to predict customer churn. The relevant group in charge of it had performance stats to back up their assertion that it worked well. But a quick glance suggested all was not as it seemed.</p>
+
+<p>What gave this away? It’s pretty simple, in fact. The variables of the model were all pretty straightforward - indicators for variables, some customer history variables and some other stuff to handle the frequency of their interactions with the company. So far so good. The problem with all this becomes apparent when you look at the coefficients of the model. Almost all of them were near zero, except for the dummy variable for one product which was massive.</p>
+
+<p>In other words, the model was just one giant <code class="highlighter-rouge">if</code> statement. If you had this product, you would churn, otherwise you wouldn’t. The reason this model seemed like it was ok was because customers with that particular product were indeed churning <em>en masse</em>, such that it masked performance flaws elsewhere in the sample space.</p>
+
+<p>In the course of a few months’ worth of trying to alert people to this, I realised that to accomplish that aim you need a good explanation for how that could have happened in the first place. This brings us to the villain of this particular story, a thing called <em>quasi-separation</em>.</p>
+
+<h3 id="separation-anxiety">Separation anxiety</h3>
+
+<p><a href="https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/">This page</a> gives as good an explanation as any I’ve seen as to what’s going on here. Long story short, the dataset used to build the model has a severe bias in it, such that it’s possible to make predictions about the label with 100% confidence in some circumstances.</p>
+
+<p>In the case I described above, what had happened was that the model was trained on a dataset that <em>contained no examples of a customer having that one product and also not churning</em>. So maximum likelihood estimation takes that and runs with it and you wind up with a model that’s ridiculously oversensitive to this one variable. The confusion matrix shows this more clearly:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center">churn</th>
+      <th style="text-align: right">no churn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Has product</td>
+      <td style="text-align: center">125</td>
+      <td style="text-align: right">0</td>
+    </tr>
+    <tr>
+      <td>Doesn’t have product</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: right">50</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Any time you see a sample with the <strong>HAS_PRODUCT</strong> flag, why wouldn’t you predict they churn? It’s a one-way bet.</p>
+
+<p>This is a really clear-cut case, unfortunately this can still happen in slightly less obvious circumstances. In the link at the start of this section, they talk about a case of exact separation with a continuous instead of binary variable. Similarly, even if the 0 in that confusion matrix was a 2 or a 5 you’d still have the problem. This can also kick in if there’s a combination of variables that exactly splits your labels.</p>
+
+<p>The most obvious knee-jerk reaction is to regularise your model, but that’s a band-aid. Really the data is the problem. And potentially the fact that you’re using a maximum likelihood technique. But that’s a matter for a separate rant some other time.</p>
+
+<p>Now it’s time for a quick FAQ on what we’ve learned!</p>
+
+<blockquote>
+  <p>Q: My neural network doesn’t have that problem</p>
+
+  <p>A: Yes it does. If you’ve got separation problems in your data, then you’re still stuffed.</p>
+</blockquote>
+
+<h3 id="how-would-i-know">How would I know?<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></h3>
+
+<p>The obvious thing is to run that confusion matrix for every categorical variable you’ve got and look for any that have a cell with barely any observations as a percentage of the total. You might also consider looking at a covariance matrix or two. The other thing you can do is just run your model and look for the signs that it has gone wrong. Remember, there are a few giveaways.</p>
+
+<ol>
+  <li>One of the coefficients is orders of magnitude bigger than the others and the standard errors are massive because the model hasn’t really converged</li>
+  <li>Some of your predictions are almost exactly zero or one - there should almost never be a reason for a model to be THAT confident</li>
+</ol>
+
+<p>This is almost surely going to happen to you at some point, if it hasn’t already. Good luck with that haha.</p>
+
+<p>I bet at least a few start-ups have got models that are really doing this under the hood.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Ok fine, this is a Soundgarden joke. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/2019/06/06/Obfuscating_a_lack_of_AI.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">It definitely worked on my computer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Stephen Hogg</li><li><a class="u-email" href="mailto:saenet.r@gmail.com">saenet.r@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/StephenHogg"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">StephenHogg</span></a></li><li><a href="https://www.linkedin.com/in/stephen-hogg-80109372"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">stephen-hogg-80109372</span></a></li><li><a href="https://www.twitter.com/whistle_posse"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">whistle_posse</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

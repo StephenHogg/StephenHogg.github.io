@@ -46,6 +46,8 @@ and you've got a perplexity score. We can turn a perplexity into an estimated ac
 
 $$ ACC_{lowerbound} = \frac{1}{e^{loss}} $$
 
+So just exponentiate your loss and then divide one by it. Done.
+
 # The bigger picture
 
 So we now have three numbers to work with:

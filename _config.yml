@@ -9,6 +9,7 @@ email: saenet.r@gmail.com
 show_excerpts: true # set to true to show excerpts on the homepage
 header_pages: ['about.md']
 url: "https://breakitdownto.earth"
+markdown: kramdown
 
 theme: minima
 plugins:

@@ -19,23 +19,19 @@ Here's a scenario that might lead you to want to partially automate things. You 
 
 Basically, LDA seeks to create a link between the words that are present in the collection (hereafter corpus), of documents you have and a number of latent (i.e. unobserved), topics. What this means in practice is that if you have an idea of how many topics there are in a corpus you can then get LDA to work out how they're defined.
 
-The other piece of information LDA needs to work relates to the topics themselves. Specifically, how narrowly defined are they? Do you only need one or two words to establish the presence of a topic in a document, or more?
+The other piece of information LDA needs to work relates to the topics themselves. Specifically, how narrowly defined are they? Do you only need one or two words to establish the presence of a topic in a document, or more? Now how do we tell which values for our parameters are good? With a model like LDA, typically you'd evaluate the _per word perplexity_. That's a mouthful, so let's start with the last word.
 
-[Confused yet?](#confused-yet)
-
-Ok, so you have two parameters to think about when searching for topics with LDA - one that governs how many topics and one that governs whether topics are narrowly or broadly defined. Now how do we tell which values are good?
-
-With a model like LDA, typically you'd evaluate the _per word perplexity_. That's a mouthful, so let's start with the last word.
+# [Confused yet?](#confused-yet)
 
 Imagine you're playing cards with someone. Normal deck of 52 as is common in the West, nothing too funny going on. Your opponent draws a card unseen to you. What could it be?
 
 If you don't know anything at all and have to make a wild guess, then there are 52 potential cards you could guess from. You have terrible odds of being right. In this case, your perplexity is 52 - the number of states you need to choose from.
 
-If, on the other hand, you know what cards are in your own hand or have seen others previously, then you can eliminate them as possibilities. If you can eliminate, say 6 cards, then that leaves 46 possible cards your opponent may have drawn. So perplexity is now 46 and you're still guessing, but with a bit more clarity.
-
-Going back to LDA (this is the _per word_ part of _per word perplexity_), what gets measured is how strongly each word in the vocabulary of your corpus is associated to any one topic. If you have no idea which topic a word relates to, then perplexity will be equal to the number of topics. Equally, if a given word clearly relates to only one topic then perplexity drops to one. You'll get a range of outcomes for the words you're working with, so it just gets averaged and called _per word perplexity_.
+If, on the other hand, you know what cards are in your own hand or have seen others previously, then you can eliminate them as possibilities. If you can eliminate, say 6 cards, then that leaves 46 possible cards your opponent may have drawn. So perplexity is now 46 and you're still guessing, but with a bit more clarity. The idea with modelling is to drive that number even lower by having your model eliminate outcomes that aren't really plausible. In this case it might be that your opponent's behaviour indicates the presence or absence of a certain card - what this boils down to is using the data you have to narrow the scope of outcomes you think are possible. Which is a great way of describing what a model does.
 
 # This all seems fine
+
+Going back to LDA (this is the _per word_ part of _per word perplexity_), what gets measured is how strongly each word in the vocabulary of your corpus is associated to any one topic. If you have no idea which topic a word relates to, then perplexity will be equal to the number of topics. Equally, if a given word clearly relates to only one topic then perplexity drops to one. You'll get a range of outcomes for the words you're working with, so it just gets averaged and called _per word perplexity_.
 
 So we have a couple of levers and a way of telling whether words are getting more or less tightly associated with topics. More is better, generally. So now we can rig up something to try a few different combinations of values for the number of topics and how narrowly defined they are, check the perplexity and pick whatever has the lowest score.
 

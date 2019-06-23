@@ -65,7 +65,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-<p>Models in production are software, so why don’t we think about how badly they might perform? That is, when we put a model into production we tend to assume that test accuracy/F1/AUC is fixed and won’t change, even though we generally know that’s not true. So why don’t we try and make a guess at how much lower our performance might reasonably turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, just <a href="">skip to the final section</a></p>
+<p>Models in production are software, so why don’t we think about how badly they might perform? That is, when we put a model into production we tend to assume that test accuracy/F1/AUC is fixed and won’t change, even though we generally know that’s not true. So why don’t we try and make a guess at how much lower our performance might reasonably turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, just <a href="#the-bigger-picture">skip to the final section</a></p>
 
 <p>Of course, the worst case is that your model gets absolutely everything wrong. That’s (hopefully) way off in the tails of your likely outcomes and not the point of this exercise, though. What I’m aiming for here is a way of looking at how much a model might underperform plausibly.</p>
 

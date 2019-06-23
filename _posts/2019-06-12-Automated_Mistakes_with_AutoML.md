@@ -21,7 +21,7 @@ Basically, LDA seeks to create a link between the words that are present in the 
 
 The other piece of information LDA needs to work relates to the topics themselves. Specifically, how narrowly defined are they? Do you only need one or two words to establish the presence of a topic in a document, or more? Now how do we tell which values for our parameters are good? With a model like LDA, typically you'd evaluate the _per word perplexity_. That's a mouthful, so let's start with the last word.
 
-# [Confused yet?](#confused-yet)
+# Confused yet?
 
 Imagine you're playing cards with someone. Normal deck of 52 as is common in the West, nothing too funny going on. Your opponent draws a card unseen to you. What could it be?
 

@@ -78,7 +78,7 @@ Finally, you can do this with other metrics aside from accuracy with some effort
 Hooray!
 
 
-[^1]: Big caveat with this last one. If you're not respecting the word "simple", it probably shouldn't be a baseline. The idea is to work out how much better of you are compared to no model.
+[^1]: Big caveat with this last one. If you're not respecting the word "simple", it probably shouldn't be a baseline. The idea is to work out how much better off you are compared to no model.
 [^2]: You could use something else, though.
 [^3]: Sure, it might not. 
 [^4]: This is basically how adversarial attacks on ML models have become a thing. The more complicated models get, the more room there is for this. But this is an aside.

@@ -6,7 +6,7 @@ image: "/assets/img/this_is_fine.png"
 
 Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you'll see in production. It's easy to see that you could wind up like this: 
 
-<script type="text/javascript" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <img src="/assets/img/this_is_fine.png" width="800" />
 
 So why don’t we try and make a guess at how much lower our performance might turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, [skip to the final section](#the-bigger-picture).

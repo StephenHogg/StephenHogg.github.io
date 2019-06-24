@@ -35,7 +35,7 @@ It's easy to work out how much upside you're capturing relative to a baseline. A
 
 # This is where it gets confusing
 
-Now how much risk are you taking on to get the outperformance you see? One way of looking at this involves [model perplexity (brief explanation you should read here)](https://breakitdownto.earth/2019/06/12/Automated_Mistakes_with_AutoML.html#confused-yet). The question is, how to arrive at that measure for a binary classifier. The good news is that it’s not hard. It's easy to turn binary cross-entropy into a perplexity score.
+Now how much risk are you taking on to get the outperformance you see? One way of looking at this involves [model perplexity (brief explanation you should read here)](https://breakitdownto.earth/2019/06/12/Automated_Mistakes_with_AutoML.html#confused-yet). The question is, how to arrive at that measure for a binary classifier. The good news is that it's easy to turn binary cross-entropy into a perplexity score.
 
 Wikipedia informs us that[^6]:
 

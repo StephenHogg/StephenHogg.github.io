@@ -12,7 +12,7 @@ Of course, the worst case is that your model gets everything wrong. That’s way
 
 Before you do anything, you need a decent baseline to compare to. What might we do in the absence of a model? You could flip a coin. Or you could always predict the commonest class. You could even use another much simpler model.[^1]
 
-For now, let’s say that your baseline model is constant-valued. The model all data are from the majority class.[^2] So what does this mean for performance?
+For now, let’s say that your baseline model is constant-valued. The model predicts all data are from the majority class.[^2] So what does this mean for performance?
 
 Imagine you’ve got a dataset where 90% of the labels are negative and the remaining 10% are positive. The constant-valued classifier gives you 90% accuracy. So if you do any worse than that on a model you’ve built, it’s fair to claim that you’ve wasted your time.
 

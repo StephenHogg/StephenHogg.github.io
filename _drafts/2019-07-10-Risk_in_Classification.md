@@ -1,10 +1,15 @@
 ---
 layout: post
 title: "Another way to look at risk versus reward in binary classification"
+image: "/assets/img/this_is_fine.png"
 ---
-<script type="text/javascript" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as given, even though we generally know that’s not true. So why don’t we try and make a guess at how much lower our performance might turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, [skip to the final section](#the-bigger-picture)
+Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you'll see in production. At worst, this is deluded. 
+
+<script type="text/javascript" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<img src="/assets/img/this_is_fine.png" width="800" />
+
+So why don’t we try and make a guess at how much lower our performance might turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, [skip to the final section](#the-bigger-picture).
 
 Of course, the worst case is that your model gets everything wrong. That’s way off in the tails of your likely outcomes and not the point of this exercise, though. What I’m aiming for here is a way of looking at how much a model might underperform in reality.
 
@@ -40,7 +45,7 @@ Wikipedia informs us that[^6]:
 
 The bit on the left side is the important thing here. Perplexity is equal to a base raised to the power of entropy. The base needs to be the same as the one used calculating entropy. So if you used the natural log when calculating cross-entropy, all you need to do is:
 
-$$ perplexity = e^{entropy} $$
+$$ perplexity = e^{loss} $$
 
 and you’ve got a perplexity score. Perplexity can become an estimated accuracy score, too. If you know that only a couple of outcomes are plausible, then at worst you can make a random guess among them. This means that all you have to do is this:
 

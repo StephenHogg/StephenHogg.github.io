@@ -4,7 +4,7 @@ title: "Another way to look at risk versus reward in binary classification"
 image: "/assets/img/this_is_fine.png"
 ---
 
-Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you'll see in production. At worst, this is deluded. 
+Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you'll see in production. It's easy to see that you could wind up like this: 
 
 <script type="text/javascript" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <img src="/assets/img/this_is_fine.png" width="800" />

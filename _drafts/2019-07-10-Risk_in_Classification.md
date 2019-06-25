@@ -73,12 +73,13 @@ Here's a scenario. You have a model with the following results:
 
 It looks like the model takes on quite a bit of risk for the upside it appears to be capturing, so you may think twice about putting this model into production. It’s not hard to think about another situation where the worst case accuracy is not far below a random baseline.
 
-None of this is all that revolutionary. The aim is to think explicitly about how much trouble a model might cause in production. That's really the big deal here. Treating models like software means being clear-eyed about how they fail like software.
+None of this is all that revolutionary. The aim is to think explicitly about how much trouble a model might cause in production. That's really the big deal here. Treating models like software means being clear-eyed about how they fail like software. With any luck, this post will help someone with that.
 
-Finally, you can do this with other metrics aside from accuracy with some effort. Multi-class problems can also be addressed with a certain amount of jiggery pokery.
+Finally, you can do this analysis with other metrics aside from accuracy with some effort. Multi-class problems can also be addressed with a certain amount of jiggery pokery.
 
 Hooray!
 
+---
 
 [^1]: Big caveat with this last one. If you're not respecting the word "simple", it probably shouldn't be a baseline. The idea is to work out how much better off you are compared to no model.
 [^2]: You could use something else, though.

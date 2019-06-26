@@ -71,7 +71,13 @@ Here's a scenario. You have a model with the following results:
 2. A baseline accuracy of 90%
 3. A lower bound estimate for accuracy of 75% (implying quite a lot of downside)
 
-It looks like the model takes on quite a bit of risk for the upside it appears to be capturing, so you may think twice about putting this model into production. It’s not hard to think about another situation where the worst case accuracy is not far below a random baseline.
+It looks like the model takes on quite a bit of risk for the upside it appears to be capturing, so you may think twice about putting this model into production. It’s not hard to think about another situation where the worst case accuracy is not far below a random baseline. Another situation I've faced looked like this:
+
+1. Reported accuracy of 92% (5% above baseline)
+2. Baseline accuracy of 87%
+3. Lower bound estimate of 84% (3% below)
+
+which seemed more favourable. 
 
 None of this is all that revolutionary. The aim is to think explicitly about how much trouble a model might cause in production. That's really the big deal here. Treating models like software means being clear-eyed about how they fail like software. With any luck, this post will help someone with that.
 

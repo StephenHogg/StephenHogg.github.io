@@ -1,5 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-26T12:02:43+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
-</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">Things I’ve learnt from one-and-a-bit years of Duolingo</title><link href="http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo.html" rel="alternate" type="text/html" title="Things I've learnt from one-and-a-bit years of Duolingo" /><published>2019-06-20T00:00:00+10:00</published><updated>2019-06-20T00:00:00+10:00</updated><id>http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo</id><content type="html" xml:base="http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo.html">&lt;p&gt;I’ve been using Duolingo for about 470 days now to learn Chinese. There are a few things I’ve learned on the way, but mostly I’ve learned to apply the lessons of a book I read partway through this journey. In this post, I’ll talk about that and what it leads me to think about how to turn this blog into a durable habit.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-28T16:45:21+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">Another way to look at risk versus reward in binary classification</title><link href="http://localhost:4000/2019/06/28/Risk_in_Classification.html" rel="alternate" type="text/html" title="Another way to look at risk versus reward in binary classification" /><published>2019-06-28T00:00:00+10:00</published><updated>2019-06-28T00:00:00+10:00</updated><id>http://localhost:4000/2019/06/28/Risk_in_Classification</id><content type="html" xml:base="http://localhost:4000/2019/06/28/Risk_in_Classification.html">&lt;p&gt;Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you’ll see in production.&lt;/p&gt;
+
+&lt;p&gt;It’s easy to see that you could wind up like this:&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/this_is_fine.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So why don’t we try and make a guess at how much lower our performance might turn out to be? In this post, I’ll look at one way of doing this with a binary classifier. If you don’t want to worry about the details, &lt;a href=&quot;#the-bigger-picture&quot;&gt;skip to the final section&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course, the worst case is that your model gets everything wrong. That’s way off in the tails of your likely outcomes and not the point of this exercise, though. What I’m aiming for here is a way of looking at how much a model might underperform in reality.&lt;/p&gt;
+
+&lt;h1 id=&quot;gotta-risk-it-to-get-the-biscuit&quot;&gt;Gotta risk it to get the biscuit&lt;/h1&gt;
+
+&lt;p&gt;Before you do anything, you need a decent baseline to compare to. What might we do in the absence of a model? You could flip a coin. Or you could always predict the commonest class. You could even use another much simpler model.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;For now, let’s say that your baseline model is constant-valued. The model predicts all data are from the majority class.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; So what does this mean for performance?&lt;/p&gt;
+
+&lt;p&gt;Imagine you’ve got a dataset where 90% of the labels are negative and the remaining 10% are positive. The constant-valued classifier gives you 90% accuracy. So if you do any worse than that on a model you’ve built, it’s fair to claim that you’ve wasted your time.&lt;/p&gt;
+
+&lt;p&gt;This is where things get interesting. We can be pretty confident about that 90% accuracy figure, because the model is simple. The more complex your model is though, the more open you are to things getting funky.&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;So it’s reasonable to ask yourself:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Given the extra performance above a baseline model I see, how much risk do I take in exchange?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;…because after all, there ain’t no such thing as a free lunch!&lt;/p&gt;
+
+&lt;h1 id=&quot;down-on-the-upside&quot;&gt;Down on the upside&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/h1&gt;
+
+&lt;p&gt;It’s easy to work out how much upside you’re capturing relative to a baseline. All you do is subtract the baseline accuracy you’ve got from your model’s reported test accuracy. If that comes out negative, stop reading: you have bigger problems.&lt;/p&gt;
+
+&lt;h1 id=&quot;this-is-where-it-gets-confusing&quot;&gt;This is where it gets confusing&lt;/h1&gt;
+
+&lt;p&gt;Now how much risk are you taking on to get the outperformance you see? One way of looking at this involves &lt;a href=&quot;https://breakitdownto.earth/2019/06/12/Automated_Mistakes_with_AutoML.html#confused-yet&quot;&gt;model perplexity (brief explanation you should read here)&lt;/a&gt;. The question is, how to arrive at that measure for a binary classifier. The good news is that it’s easy to turn binary cross-entropy into a perplexity score.&lt;/p&gt;
+
+&lt;p&gt;Wikipedia informs us that&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The perplexity of a discrete probability distribution p is defined as:&lt;/p&gt;
+
+  &lt;script type=&quot;math/tex; mode=display&quot;&gt;2^{H(p)}=2^{-\sum _{x=1} p(x)\log _{2}p(x)}&lt;/script&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The bit on the left side is the important thing here. Perplexity is equal to a base raised to the power of entropy. The base needs to be the same as the one used calculating entropy. So if you used the natural log when calculating cross-entropy, all you need to do is:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;perplexity = e^{loss}&lt;/script&gt;
+
+&lt;p&gt;and you’ve got a perplexity score. Perplexity can become an estimated accuracy score, too. If you know that only a couple of outcomes are plausible, then at worst you can make a random guess among them. This means that all you have to do is this:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;ACC_{lowerbound} = \frac{1}{e^{loss}}&lt;/script&gt;
+
+&lt;p&gt;So just exponentiate your loss and then divide one by it. Done.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-bigger-picture&quot;&gt;The bigger picture&lt;/h1&gt;
+
+&lt;p&gt;So we now have three numbers to work with:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The accuracy as reported on our test set&lt;/li&gt;
+  &lt;li&gt;The accuracy achieved by a baseline model&lt;/li&gt;
+  &lt;li&gt;The estimate we have of how badly our model might plausibly perform in the wild derived above&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now it’s just a matter of judgement really. Given how well your model appears to perform, is the risk on the downside worth it?&lt;/p&gt;
+
+&lt;p&gt;Here’s a scenario. You have a model with the following results:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reported test set accuracy of 93% (implying 3% of upside on a baseline classifier)&lt;/li&gt;
+  &lt;li&gt;A baseline accuracy of 90%&lt;/li&gt;
+  &lt;li&gt;A lower bound estimate for accuracy of 75% (implying quite a lot of downside)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It looks like the model takes on quite a bit of risk for the upside it appears to be capturing, so you may think twice about putting this model into production. It’s not hard to think about another situation where the worst case accuracy is not far below a random baseline. Another situation I’ve faced looked like this:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reported accuracy of 92% (5% above baseline)&lt;/li&gt;
+  &lt;li&gt;Baseline accuracy of 87%&lt;/li&gt;
+  &lt;li&gt;Lower bound estimate of 84% (3% below)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;which seemed more favourable.&lt;/p&gt;
+
+&lt;p&gt;None of this is all that revolutionary. The aim is to think explicitly about how much trouble a model might cause in production. That’s really the big deal here. Treating models like software means being clear-eyed about how they fail like software. With any luck, this post will help someone with that.&lt;/p&gt;
+
+&lt;p&gt;Finally, you can do this analysis with other metrics aside from accuracy with some effort. Multi-class problems can also be addressed with a certain amount of jiggery pokery.&lt;/p&gt;
+
+&lt;p&gt;Hooray!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Big caveat with this last one. If you’re not respecting the word “simple”, it probably shouldn’t be a baseline. The idea is to work out how much better off you are compared to no model. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;You could use something else, though. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;This is basically how adversarial attacks on ML models have become a thing. The more complicated models get, the more room there is for this. But this is an aside. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Yup. Soundgarden jokes. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Perplexity &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">Models in production are software, so why don’t we think about how badly they might perform? When we put a model into production we tend to take test accuracy/F1/AUC as fixed, even though we generally know that’s not true. Test set performance is an estimate, not a guarantee, of what you’ll see in production.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/this_is_fine.png" /></entry><entry><title type="html">Things I’ve learnt from one-and-a-bit years of Duolingo</title><link href="http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo.html" rel="alternate" type="text/html" title="Things I've learnt from one-and-a-bit years of Duolingo" /><published>2019-06-20T00:00:00+10:00</published><updated>2019-06-20T00:00:00+10:00</updated><id>http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo</id><content type="html" xml:base="http://localhost:4000/2019/06/20/Things_Ive_Learnt_From_Duolingo.html">&lt;p&gt;I’ve been using Duolingo for about 470 days now to learn Chinese. There are a few things I’ve learned on the way, but mostly I’ve learned to apply the lessons of a book I read partway through this journey. In this post, I’ll talk about that and what it leads me to think about how to turn this blog into a durable habit.&lt;/p&gt;
 
 &lt;h1 id=&quot;pretty-clear-i-guess&quot;&gt;Pretty clear, I guess&lt;/h1&gt;
 

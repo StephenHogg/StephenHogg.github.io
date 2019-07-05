@@ -25,8 +25,15 @@ Some of the strategies you can use include attempting to identify all the remain
 
 This is where flow starts to come in. One of the keys to achieving a state of flow relates to the difficulty involved. If you can get it right - not so easy you get bored, not so hard it's impossible - then you can find yourself in a state where everything feels almost effortless and almost instinctive. That's flow. 
 
-Fortunately, the average Sudoku app caters to this nicely with a difficulty setting. 
+Fortunately, the average Sudoku app caters to this nicely with a difficulty setting. At first I wasn't really thinking about this, I was simply trying to incrementally improve by putting up the difficulty whenever my solution times started dropping. Then once I got to the Hard setting I started realising that I wasn't really learning that much new but sometimes would fall into flow.[^2]
+
+It then became apparent that this was most likely to happen when I was faithfully applying the strategies I'd learned rather than trying anything new. That's interesting, because it suggests to me that flow and learning something aren't really compatible which shouldn't necessarily be the case. 
+
+The other thing I noticed was that when I played Sudoku more regularly, I tended to be more likely to achieve a state of flow.[^3] This is interesting, because it suggested to me that there might be a link between habits and flow that's a little deeper than I thought. I wonder if there's some way of exploring this a bit more explicitly.
+
 
 
 
 [^1]: Ugh.
+[^2]: You feel like a magician immediately after.
+[^3]: It wasn't just a case of it being more frequent because I played more.

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to avoid doing semi-supervised learning | It definitely worked on my computer</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to avoid doing semi-supervised learning" />
+<meta name="author" content="Stephen Hogg" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It’s easy to find yourself solving a problem with labels for only some of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:" />
+<meta property="og:description" content="It’s easy to find yourself solving a problem with labels for only some of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:" />
+<link rel="canonical" href="http://localhost:4000/drafts/2019-07-12-Semi-Supervised_Learning_Trick.html" />
+<meta property="og:url" content="http://localhost:4000/drafts/2019-07-12-Semi-Supervised_Learning_Trick.html" />
+<meta property="og:site_name" content="It definitely worked on my computer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-12T00:00:00+10:00" />
+<script type="application/ld+json">
+{"description":"It’s easy to find yourself solving a problem with labels for only some of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:","author":{"@type":"Person","name":"Stephen Hogg"},"@type":"BlogPosting","url":"http://localhost:4000/drafts/2019-07-12-Semi-Supervised_Learning_Trick.html","headline":"How to avoid doing semi-supervised learning","dateModified":"2019-07-12T00:00:00+10:00","datePublished":"2019-07-12T00:00:00+10:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/drafts/2019-07-12-Semi-Supervised_Learning_Trick.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="It definitely worked on my computer" /><!-- Twitter cards -->
+    <meta name="twitter:site" content="@whistle_posse">
+    <meta name="twitter:creator" content="@whistle_posse">
+
+    
+    <meta name="twitter:title" content="How to avoid doing semi-supervised learning">
+    
+
+    
+    <meta name="twitter:description" content="This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+">
+    
+
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/kilroy.png">
+    
+    <!-- end of Twitter cards -->
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">It definitely worked on my computer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How to avoid doing semi-supervised learning</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-07-12T00:00:00+10:00" itemprop="datePublished">Jul 12, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>It’s easy to find yourself solving a problem with labels for only <em>some</em> of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:</p>
+
+<ul>
+  <li>Ignore it and just work with what you have</li>
+  <li>Try to include it, but:
+    <ul>
+      <li>Do so without making any guess about what the true label is</li>
+      <li>Try to infer the missing labels first</li>
+    </ul>
+  </li>
+</ul>
+
+<p>As you’d guess, all of the above are a nightmare. If you ignore your unlabelled data, you’re setting up an obvious bias problem. If you try to include unlabelled data as-is the math starts getting complicated. And trying to infer the missing labels first can create noise if you’re not careful. So how can we get out of all of this? This post is about one possible answer.</p>
+
+<h1 id="the-set-up">The Set-Up</h1>
+
+<p>Incorporating unlabelled data in a model falls under the heading of “semi-supervised” learning. One particular example of this is “positive-unlabelled” learning. This consists of having labels for some positive examples and many unlabelled examples. This is a pretty common scenario and one I’ve found myself in before.</p>
+
+<p>Semi-supervised learning is useful but complex, so it’s better to achieve the same thing by simpler means. If you wanted to go down that path, you’d have to code up a fairly complicated likelihood. Instead, it turns out that you can have basically the same gradient without that. Thanks to <a href="http://www.machinedlearnings.com/2012/03/pu-learning-and-auc.html">Paul Mineiro pointing this out</a>, we know that the AUC of a full-labelled model is proportionate to one with only positive labels available. As he says, this means you can just treat unlabelled examples as members of the negative class. Once you’ve done that, all you need to do is optimise AUC.</p>
+
+<h1 id="optimising-auc">Optimising AUC</h1>
+
+<p>Optimising AUC is tricky because there’s no gradient to work with. The simplest definition of it boils down to repeated random sampling from the positive and negative classes. So there are a couple of ways around this.</p>
+
+<p>Firstly, you might employ an age-old trick. This is summed up pretty simply as follows:</p>
+
+<blockquote>
+  <p>“When you don’t know how to solve something, try to solve something else”</p>
+</blockquote>
+
+<p>In AUC terms, this means adopting a pairwise loss or ranking-based metric. Parwise loss metrics generally mimic the kind of thing that AUC is trying to characterise. If you’re lucky enough to be working with something like Tensorflow, then these are readily available. If you go down this path, then it’s a simple matter of just altering regularisation parameters and learning rates to taste.</p>
+
+<p>You might also instead use whatever loss function you were planning to use but just keep track of AUC anyway. One final thought with regards to this is that any metric you can get from the 2x2 confusion matrix can be optimised by altering the class weights. AUC is based on the true positive and false positive rates, so it falls into this category.</p>
+
+  </div><a class="u-url" href="/drafts/2019-07-12-Semi-Supervised_Learning_Trick.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">It definitely worked on my computer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Stephen Hogg</li><li><a class="u-email" href="mailto:saenet.r@gmail.com">saenet.r@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/StephenHogg"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">StephenHogg</span></a></li><li><a href="https://www.linkedin.com/in/stephen-hogg-80109372"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">stephen-hogg-80109372</span></a></li><li><a href="https://www.twitter.com/whistle_posse"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">whistle_posse</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,5 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-16T16:21:48+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
-</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">How to avoid doing semi-supervised learning</title><link href="http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick.html" rel="alternate" type="text/html" title="How to avoid doing semi-supervised learning" /><published>2019-07-12T00:00:00+10:00</published><updated>2019-07-12T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick</id><content type="html" xml:base="http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick.html">&lt;p&gt;It’s easy to find yourself solving a problem with labels for only &lt;em&gt;some&lt;/em&gt; of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-19T16:36:26+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">Music as History</title><link href="http://localhost:4000/2019/07/19/Music_as_History.html" rel="alternate" type="text/html" title="Music as History" /><published>2019-07-19T00:00:00+10:00</published><updated>2019-07-19T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/19/Music_as_History</id><content type="html" xml:base="http://localhost:4000/2019/07/19/Music_as_History.html">&lt;p&gt;A big part of why music is interesting to me derives from the way in which it illustrates the culture that brought it forward. To digress, and delve into the world of Iain M. Banks again, one of his &lt;em&gt;Culture&lt;/em&gt; books has the following to say&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;     Most civilisations that had acquired the means to build genuine Artificial Intelligences duly built them, and most of those designed or shaped the consciousness of the AIs to a greater or lesser extent; obviously if you were constructing a sentience that was or could easily become much greater than your own, it would not be in your interest to create a being which loathed you and might be likely to set about dreaming up ways to exterminate you.&lt;/p&gt;
+
+  &lt;p&gt;     So AIs, especially at first, tended to reflect the civilisational demeanour of their source species. Even when they underwent their own form of evolution and began to design their successors - with or without the help, and sometimes the knowledge, of their creators - there was usually still a detectable flaour of the intellectual character and the basic morality of that precursor species present in the resulting consciousness. That flavour might gradually disappear over subsequent generations of AIs, but it would usually be replaced by another, adopted and adapted from elsewhere, or just mutate beyond recognition rather than disappear altogether.&lt;/p&gt;
+
+  &lt;p&gt;     What various Involveds including the Culture had also tried to do, often out of sheer curiosity once AI had become a settled and even routine technology, was to devise a consciousness with no flavour; one with no metalogical baggage whatsoever; what had become known as a perfect AI.&lt;/p&gt;
+
+  &lt;p&gt;     It turned out that creating such intelligences was not particularly challenging once you could build AIs in the first place. The difficulties only arose when such machines became sufficiently empowered to do whatever they wanted to do. They didn’t go berserk and try to kill all about them, and they didn’t relapse into some blissed-out state of machine solipsism.&lt;/p&gt;
+
+  &lt;p&gt;     What they did do at the first available opportunity was Sublime, leaving the material universe altogether and joining the many beings, communities and entire civilisations which had gone that way before. It was certainly a rule and appeared to be a law that &lt;em&gt;perfect AIs always Sublime&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This passage really grabs me as it makes a very clear link between personal and civilisational identities.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; This is an issue that recurs in a number of contexts outside of award-winning science fiction, as it happens. In this post, I’m going to attempt to talk semi-coherently about this with regards to music.&lt;/p&gt;
+
+&lt;h1 id=&quot;dancing&quot;&gt;Dancing&lt;/h1&gt;
+
+&lt;p&gt;Eurovision makes for great popcorn viewing. The costumes and music frequently boil down to outlandish attempts at gaining viewer attention because of the way the contest is structured. Citizens of European countries vote for the competition winner, so there are well-known voting blocs that have arisen due to cultural affinity.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Despite the obvious incongruity of some of the voting patterns, in a way this kind of makes sense. It makes sense that the path to victory is going to involve either a) triggering existing neural pathways in listeners by presenting something that is familiar to a lot of them (difficult in a diverse population like Europe’s) or b) trying something highly novel to achieve the same end. Or something that tries to do both.&lt;/p&gt;
+
+&lt;p&gt;Verka Serduchka is my favourite example of the second strategy, seen here on the stage:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/verka-serd2.jpg&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The play-stuff-they-know strategy is kind of interesting and might help explain why voting blocs exist. The more angles you have for understanding something, the easier it is to recall. So if a song connects with more parts of your memory, you’re likely to remember it more when it comes to voting.&lt;/p&gt;
+
+&lt;p&gt;This isn’t really that big of a point, but really just a stepping stone towards a half-formed idea about how music tells you something about the circumstances in which it was made. More on this in the future!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;em&gt;Look to Windward&lt;/em&gt;, Iain M. Banks, London: Orbit, 2000, ISBN 1-85723-981-4 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;This is something that Mihalyi Csikszentmihalyi has a lot to say about in &lt;em&gt;Flow&lt;/em&gt;, which I’ll revisit at another time. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;https://en.wikipedia.org/wiki/Voting_at_the_Eurovision_Song_Contest#Regional_bloc_voting It’s hilarious how some of these blocs consist of countries that HATE each other. The Balkan states as a voting bloc?! &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">A big part of why music is interesting to me derives from the way in which it illustrates the culture that brought it forward. To digress, and delve into the world of Iain M. Banks again, one of his Culture books has the following to say1: Look to Windward, Iain M. Banks, London: Orbit, 2000, ISBN 1-85723-981-4 &amp;#8617;</summary></entry><entry><title type="html">How to avoid doing semi-supervised learning</title><link href="http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick.html" rel="alternate" type="text/html" title="How to avoid doing semi-supervised learning" /><published>2019-07-12T00:00:00+10:00</published><updated>2019-07-12T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick</id><content type="html" xml:base="http://localhost:4000/2019/07/12/Semi-Supervised_Learning_Trick.html">&lt;p&gt;It’s easy to find yourself solving a problem with labels for only &lt;em&gt;some&lt;/em&gt; of your data. This creates a quandary - what to do about the rest of your unlabelled data? There are a few possible answers:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Ignore it and just work with what you have&lt;/li&gt;

@@ -11,7 +11,7 @@ In this post I'll attempt to explain how it works.
 Imagine you've got a large amount of free text data, with no labels for the documents. You want to be able to classify them, so what can you do? 
 Here are your options:
 
-<img src="/assets/img/Brain.png" width="800" />
+<img src="/assets/img/Brain.png" width="400" height="600" />
 
 # Manually Annotating Everything 
 

@@ -39,4 +39,12 @@ When looking for topics in LDA, you have access to a parameter usually denoted $
 
 So far so good. Now for each topic you can just inspect a few of the most strongly-associated documents and decide what it's about. This is still manual labour in a way, but not nearly as onerous and you get a lot more bang for your buck. For each document in, say, the top 10% by score of a given topic, label it with that topic. This doesn't really mean manual work either. With an idea of what your topics are about you can put a few of them together in a class, giving rise to large amount of coherently labelled data with comparatively little work.
 
+Now what you're left with is a bunch of documents where you can be confident of their class membership and a much larger body that may or may not be members of the classes you've created. Which is basically the definition of PU-learning, so [the trick I alluded to earlier](https://breakitdownto.earth/2019/07/12/Semi-Supervised_Learning_Trick.html) applies here.
+
+Long story short, if you use LDA to identify groupings of documents, you can turn them into classification labels easily. Then it's just a matter of training your model in the right way. Simple!
+
+# Writing a Blog About It
+
+Obviously the easiest bit. Ta da!
+
 

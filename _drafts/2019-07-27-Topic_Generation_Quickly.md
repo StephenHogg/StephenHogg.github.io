@@ -13,9 +13,11 @@ Here are your options:
 
 <img src="/assets/img/Brain.png" width="400" height="600" />
 
+These options are ordered according to the amount of labour involved, with manual annotation the most and blogging the least.
+
 # Manually Annotating Everything 
 
-Urgh. At least get Mechanical Turk to do it or something. And while you're at it, make sure you pay your workers fairly.
+Urgh. At least get Mechanical Turk to do it or something. And while you're at it, (it's not hard to pay your workers fairly)[https://fairwork.stanford.edu/].
 
 # Semi-Supervised Learning
 

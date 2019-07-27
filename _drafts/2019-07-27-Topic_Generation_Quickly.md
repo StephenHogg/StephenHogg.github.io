@@ -34,3 +34,9 @@ If you're feeling really advanced, you might try some sort of active learning af
 # Multi-part Modelling Weirdness
 
 Given that we need some idea of topics before we start labelling them, how can we do this. There are plenty of unsupervised tools out there, but let's look at LDA ([Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation), not [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)) for a second.
+
+When looking for topics in LDA, you have access to a parameter usually denoted $$\alpha$$. This governs how broadly-defined the topics you're looking for are. What you might consider doing is setting that to be something narrow (i.e. 0.8-0.9) and then using that to arrange your documents into small, similar clumps.
+
+So far so good. Now for each topic you can just inspect a few of the most strongly-associated documents and decide what it's about. This is still manual labour in a way, but not nearly as onerous and you get a lot more bang for your buck. For each document in, say, the top 10% by score of a given topic, label it with that topic. This doesn't really mean manual work either. With an idea of what your topics are about you can put a few of them together in a class, giving rise to large amount of coherently labelled data with comparatively little work.
+
+

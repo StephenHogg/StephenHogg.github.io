@@ -24,4 +24,13 @@ There's another sleeper problem here as well. How do you know what the topics ar
 
 # Semi-Supervised Learning
 
-This is a bit better. Instead of labelling everything, pick some stuff that represents the 
+This is a bit better. Instead of labelling everything, pick some stuff that represents a few topics you're interested in and try to capture the latent structure of all the unlabelled data when you build a model. This involves potentially a lot less manual labour than the previous option, but there's still a fair bit of work to do. There are other problems as well. 
+
+As with full manual annotation, you're still stuck with the task of working out what is actually _in_ your data before manually labelling anything. Which is still the same chicken-and-egg problem. Another problem lurks in the question: how much is actually enough?
+Finally, semi-supervised learning is a bit tricky because of the weird likelihood function among other things. That said, on this last point [shortcuts do exist](https://breakitdownto.earth/2019/07/12/Semi-Supervised_Learning_Trick.html).
+
+If you're feeling really advanced, you might try some sort of active learning after you've labelled some examples. In my experience this doesn't work out as planned, because unless you've labelled heaps of data everything still looks novel to a classifier. So that's not a shortcut either. Still, at least with this option you don't necessarily do _as much_ manual labelling.
+
+# Multi-part Modelling Weirdness
+
+Given that we need some idea of topics before we start labelling them, how can we do this. There are plenty of unsupervised tools out there, but let's look at LDA ([Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation), not [Linear Discriminant Analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)) for a second.

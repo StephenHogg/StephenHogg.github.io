@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Topic Generation, Quickly"
+title: "A Hack to Avoid Labelling Topic Classification Data"
 image: "/assets/img/Brain.png"
 ---
 

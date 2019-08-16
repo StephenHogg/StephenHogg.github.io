@@ -18,7 +18,7 @@ the lessons of herd behaviour from history can't help us as individuals, but it'
 
 Another thought that arises from the book is also worth remarking upon. It suggests that the incidence of fraud increases during bubble times because people want their wealth to grow _even_ faster. In turn, 
 the book also says the incidence of fraud grows in hard times because people feel driven to it by necessity. So when does the incidence of fraud go _down_?
-If ever there was an inadvertent critique of our times I thought emblematic, it's the one written in a mainstream history of capitalism that suggests that the incidence of fraud _always increases_.
+If ever there was an inadvertent critique of our times I thought emblematic, it's the one written in a mainstream history of capitalism that suggests that the incidence of fraud _almost always increases_.
 
 So that's all good, then!
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What does "Manias, Panics and Crashes" teach us about ourselves?"
+title: "What does \"Manias, Panics and Crashes\" teach us about ourselves?"
 ---
 
 One book I've been reading with a fair bit of interest recently is _Manias, Panics and Crashes_, by the late Charles P. Kindleberger. 

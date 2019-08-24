@@ -10,6 +10,8 @@ Rather than feeding in one example at a time with a corresponding label, in the 
 [one of these things is not like the others](https://www.youtube.com/watch?v=rsRjQDrDnY8). The loss function just tries to make sure that the ensuing model respects that fact for a 
 given triplet of examples, similar to how an SVM just tries to maximise the margin between classes rather than accurately predict the value for every single observation.
 
+# Now to try and do something vaguely interesting
+
 As someone working in NLP, I immediately wondered about the possibility of using this technique to encode word vectors. Not only that, but whether they would be worthwhile or not.
 A little searching on the internet makes it appear to me that this hasn't been done, so over the next week or so I will attempt it. Prior to setting out, 
 here are a few thoughts:
@@ -18,6 +20,8 @@ here are a few thoughts:
 - Are we recording enough information about the relationship?
 - Is a max-margin approach really going to give us the fine-grained control we want?
 - How do I tell if this was a waste of time?
+
+# Fine. Whatever
 
 As usual, I predict the first of these things will take the most of my concentration. That's just how this machine learning caper works.
 More on this next time. 

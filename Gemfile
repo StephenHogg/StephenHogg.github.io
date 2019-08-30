@@ -20,5 +20,3 @@ group :jekyll_plugins do
   gem "jekyll-relative-links"
   gem "jekyll-seo-tag"
 end
-
-gem 'jekyll-seo-tag'

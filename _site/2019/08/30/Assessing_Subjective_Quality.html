@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Qualitative Assessment is a Nightmare | It definitely worked on my computer</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Qualitative Assessment is a Nightmare" />
+<meta name="author" content="Stephen Hogg" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out plenty of people have had that idea, or some variant thereof. So doing it myself looks a bit silly." />
+<meta property="og:description" content="Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out plenty of people have had that idea, or some variant thereof. So doing it myself looks a bit silly." />
+<link rel="canonical" href="http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html" />
+<meta property="og:url" content="http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html" />
+<meta property="og:site_name" content="It definitely worked on my computer" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-30T00:00:00+10:00" />
+<script type="application/ld+json">
+{"description":"Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out plenty of people have had that idea, or some variant thereof. So doing it myself looks a bit silly.","author":{"@type":"Person","name":"Stephen Hogg"},"@type":"BlogPosting","url":"http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html","headline":"Qualitative Assessment is a Nightmare","dateModified":"2019-08-30T00:00:00+10:00","datePublished":"2019-08-30T00:00:00+10:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="It definitely worked on my computer" /><!-- Twitter cards -->
+    <meta name="twitter:site" content="@whistle_posse">
+    <meta name="twitter:creator" content="@whistle_posse">
+
+    
+    <meta name="twitter:title" content="Qualitative Assessment is a Nightmare">
+    
+
+    
+    <meta name="twitter:description" content="This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+">
+    
+
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/kilroy.png">
+    
+    <!-- end of Twitter cards -->
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">It definitely worked on my computer</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Qualitative Assessment is a Nightmare</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-08-30T00:00:00+10:00" itemprop="datePublished">Aug 30, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out <a href="https://www.researchgate.net/publication/321302050_Beyond_Word2Vec_Embedding_Words_and_Phrases_in_Same_Vector_Space">plenty of people</a> <a href="https://chauff.github.io/dir2016/accepted-submissions/kenter.pdf">have had</a> <a href="https://github.com/dhwajraj/deep-siamese-text-similarity">that idea</a>, or some variant thereof. So doing it myself looks a bit silly.</p>
+
+<p>There’s still something to think about here: how does one decide whether word vectors are good or not? The obvious way to look at this is to ask yourself whether they let you do the task you need them for. For someone wanting to make a library of pre-trained vectors available (such as those of <a href="https://fasttext.cc/docs/en/crawl-vectors.html">fastText</a>, for example), it isn’t as simple. You might try comparing two libraries of word vectors across a number of tasks, or maybe even doing the old <a href="https://kawine.github.io/blog/nlp/2019/06/21/word-analogies.html">word analogy trick</a>.</p>
+
+<p>More broadly, how do you do something about assessing the <em>quality</em> of a machine learning solution when reasonable people can differ on the answer?</p>
+
+<h1 id="sometimes-its-easiest-to-bury-your-head-in-the-sand">Sometimes it’s easiest to bury your head in the sand</h1>
+
+<p>We know how to measure model performance in objective terms, but if you’re interested in something subjective it’s easy to waste your time learning nothing. The problem with subjectively assessing the output of a machine learning model is precisely that.</p>
+
+<p>The bog standard thing people do in this situation (in my experience), is decide to look at a sample of data manually and get a human to make a definitive judgement about whether the model performed well or not. I prefer to think of this as “pretending there isn’t a problem”. By getting a human to make a definitive judgement, you’re implicitly saying that the person involved is always right and discounting the possibility of other viewpoints. The common (in my experience) answer to this problem is also naïve. Getting a few humans to check and agree on how they will assess things doesn’t solve anything. When people inevitably disagree, who is right?</p>
+
+<p>The even bigger problem here is that inevitably, when you’re verifying things manually it’s hard to check more than a little data. This is <em>definitionally</em> the most labourious approach for verifying the performance of a model!</p>
+
+<h1 id="well-that-didnt-work">Well that didn’t work</h1>
+
+<p>At this stage, it’s natural to start looking for alternatives. Rather than looking for definitive proof that a model works (or doesn’t), instead it’s better to just look for <em>evidence</em>. This is where the word analogy thing comes in again. It’s a perfect example of what to do, in fact. Start with an initial idea of something that should be desirable in the outputs you have and then check whether that’s the case. Then come up with something else that intuition suggests should emerge from the results you have generated. Test it and move on. Then it’s just a matter of keeping going until you’ve got enough bits of evidence to feel like they add up to something.</p>
+
+<p>One of the reasons the word analogy trick is such a great example is that <a href="https://books.google.com.au/books?id=_LBmDwAAQBAJ&amp;pg=PA40&amp;lpg=PA40&amp;dq=fasttext+king+queen&amp;source=bl&amp;ots=nl1uX3NRpR&amp;sig=ACfU3U32Y2i_j5fyoFDnKtwPt13r1271UQ&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwiUoIC5rafkAhXp7HMBHSzRCtUQ6AEwGXoECAkQAQ#v=onepage&amp;q=fasttext%20king%20queen&amp;f=false">sometimes it shows you bad results</a>. If that happens, it’s a simple matter to decide a) whether that matters to you or not and b) how it colours your view of whether this model works or not.</p>
+
+<p>I find this approach works better for a few reason. The first is that you wind up assessing a lot more data, because it’s a much less labourious approach. That in turn should reduce the scope for nasty surprises down the track. The second is that this explicitly accepts the subjective nature of the problem. By not looking for binary, definitive proof and instead just amassing indications, the fact that different people can have different views isn’t necessarily as big of a deal.</p>
+
+<p>I’ll be gone for the next little bit but should be back at the end of September!</p>
+
+  </div><a class="u-url" href="/2019/08/30/Assessing_Subjective_Quality.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">It definitely worked on my computer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Stephen Hogg</li><li><a class="u-email" href="mailto:saenet.r@gmail.com">saenet.r@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/StephenHogg"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">StephenHogg</span></a></li><li><a href="https://www.linkedin.com/in/stephen-hogg-80109372"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">stephen-hogg-80109372</span></a></li><li><a href="https://www.twitter.com/whistle_posse"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">whistle_posse</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

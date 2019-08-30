@@ -1,5 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-19T16:36:26+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
-</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">Music as History</title><link href="http://localhost:4000/2019/07/19/Music_as_History.html" rel="alternate" type="text/html" title="Music as History" /><published>2019-07-19T00:00:00+10:00</published><updated>2019-07-19T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/19/Music_as_History</id><content type="html" xml:base="http://localhost:4000/2019/07/19/Music_as_History.html">&lt;p&gt;A big part of why music is interesting to me derives from the way in which it illustrates the culture that brought it forward. To digress, and delve into the world of Iain M. Banks again, one of his &lt;em&gt;Culture&lt;/em&gt; books has the following to say&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-30T16:52:41+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">It definitely worked on my computer</title><subtitle>This blog contains wild-eyed rants and  things that I need to write down somewhere.  Obviously, the views expressed here are my own.
+</subtitle><author><name>Stephen Hogg</name></author><entry><title type="html">Qualitative Assessment is a Nightmare</title><link href="http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html" rel="alternate" type="text/html" title="Qualitative Assessment is a Nightmare" /><published>2019-08-30T00:00:00+10:00</published><updated>2019-08-30T00:00:00+10:00</updated><id>http://localhost:4000/2019/08/30/Assessing_Subjective_Quality</id><content type="html" xml:base="http://localhost:4000/2019/08/30/Assessing_Subjective_Quality.html">&lt;p&gt;Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out &lt;a href=&quot;https://www.researchgate.net/publication/321302050_Beyond_Word2Vec_Embedding_Words_and_Phrases_in_Same_Vector_Space&quot;&gt;plenty of people&lt;/a&gt; &lt;a href=&quot;https://chauff.github.io/dir2016/accepted-submissions/kenter.pdf&quot;&gt;have had&lt;/a&gt; &lt;a href=&quot;https://github.com/dhwajraj/deep-siamese-text-similarity&quot;&gt;that idea&lt;/a&gt;, or some variant thereof. So doing it myself looks a bit silly.&lt;/p&gt;
+
+&lt;p&gt;There’s still something to think about here: how does one decide whether word vectors are good or not? The obvious way to look at this is to ask yourself whether they let you do the task you need them for. For someone wanting to make a library of pre-trained vectors available (such as those of &lt;a href=&quot;https://fasttext.cc/docs/en/crawl-vectors.html&quot;&gt;fastText&lt;/a&gt;, for example), it isn’t as simple. You might try comparing two libraries of word vectors across a number of tasks, or maybe even doing the old &lt;a href=&quot;https://kawine.github.io/blog/nlp/2019/06/21/word-analogies.html&quot;&gt;word analogy trick&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;More broadly, how do you do something about assessing the &lt;em&gt;quality&lt;/em&gt; of a machine learning solution when reasonable people can differ on the answer?&lt;/p&gt;
+
+&lt;h1 id=&quot;sometimes-its-easiest-to-bury-your-head-in-the-sand&quot;&gt;Sometimes it’s easiest to bury your head in the sand&lt;/h1&gt;
+
+&lt;p&gt;We know how to measure model performance in objective terms, but if you’re interested in something subjective it’s easy to waste your time learning nothing. The problem with subjectively assessing the output of a machine learning model is precisely that.&lt;/p&gt;
+
+&lt;p&gt;The bog standard thing people do in this situation (in my experience), is decide to look at a sample of data manually and get a human to make a definitive judgement about whether the model performed well or not. I prefer to think of this as “pretending there isn’t a problem”. By getting a human to make a definitive judgement, you’re implicitly saying that the person involved is always right and discounting the possibility of other viewpoints. The common (in my experience) answer to this problem is also naïve. Getting a few humans to check and agree on how they will assess things doesn’t solve anything. When people inevitably disagree, who is right?&lt;/p&gt;
+
+&lt;p&gt;The even bigger problem here is that inevitably, when you’re verifying things manually it’s hard to check more than a little data. This is &lt;em&gt;definitionally&lt;/em&gt; the most labourious approach for verifying the performance of a model!&lt;/p&gt;
+
+&lt;h1 id=&quot;well-that-didnt-work&quot;&gt;Well that didn’t work&lt;/h1&gt;
+
+&lt;p&gt;At this stage, it’s natural to start looking for alternatives. Rather than looking for definitive proof that a model works (or doesn’t), instead it’s better to just look for &lt;em&gt;evidence&lt;/em&gt;. This is where the word analogy thing comes in again. It’s a perfect example of what to do, in fact. Start with an initial idea of something that should be desirable in the outputs you have and then check whether that’s the case. Then come up with something else that intuition suggests should emerge from the results you have generated. Test it and move on. Then it’s just a matter of keeping going until you’ve got enough bits of evidence to feel like they add up to something.&lt;/p&gt;
+
+&lt;p&gt;One of the reasons the word analogy trick is such a great example is that &lt;a href=&quot;https://books.google.com.au/books?id=_LBmDwAAQBAJ&amp;amp;pg=PA40&amp;amp;lpg=PA40&amp;amp;dq=fasttext+king+queen&amp;amp;source=bl&amp;amp;ots=nl1uX3NRpR&amp;amp;sig=ACfU3U32Y2i_j5fyoFDnKtwPt13r1271UQ&amp;amp;hl=en&amp;amp;sa=X&amp;amp;ved=2ahUKEwiUoIC5rafkAhXp7HMBHSzRCtUQ6AEwGXoECAkQAQ#v=onepage&amp;amp;q=fasttext%20king%20queen&amp;amp;f=false&quot;&gt;sometimes it shows you bad results&lt;/a&gt;. If that happens, it’s a simple matter to decide a) whether that matters to you or not and b) how it colours your view of whether this model works or not.&lt;/p&gt;
+
+&lt;p&gt;I find this approach works better for a few reason. The first is that you wind up assessing a lot more data, because it’s a much less labourious approach. That in turn should reduce the scope for nasty surprises down the track. The second is that this explicitly accepts the subjective nature of the problem. By not looking for binary, definitive proof and instead just amassing indications, the fact that different people can have different views isn’t necessarily as big of a deal.&lt;/p&gt;
+
+&lt;p&gt;I’ll be gone for the next little bit but should be back at the end of September!&lt;/p&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">Last week I had an idea about maybe using FaceNet or some other Siamese network to create word embeddings. Turns out plenty of people have had that idea, or some variant thereof. So doing it myself looks a bit silly.</summary></entry><entry><title type="html">A random thought about FaceNet</title><link href="http://localhost:4000/2019/08/24/Random_thought_about_FaceNet.html" rel="alternate" type="text/html" title="A random thought about FaceNet" /><published>2019-08-24T00:00:00+10:00</published><updated>2019-08-24T00:00:00+10:00</updated><id>http://localhost:4000/2019/08/24/Random_thought_about_FaceNet</id><content type="html" xml:base="http://localhost:4000/2019/08/24/Random_thought_about_FaceNet.html">&lt;p&gt;The problem of facial recognition is now pretty much solved thanks to &lt;a href=&quot;https://arxiv.org/abs/1503.03832&quot;&gt;FaceNet&lt;/a&gt;.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; The underpinning insight that makes it all
+come together is analogous to the way an SVM works. But have we done all we can with this rather novel form of network?&lt;/p&gt;
+
+&lt;p&gt;Rather than feeding in one example at a time with a corresponding label, in the FaceNet architecture three examples are presented with the intention that
+&lt;a href=&quot;https://www.youtube.com/watch?v=rsRjQDrDnY8&quot;&gt;one of these things is not like the others&lt;/a&gt;. The loss function just tries to make sure that the ensuing model respects that fact for a 
+given triplet of examples, similar to how an SVM just tries to maximise the margin between classes rather than accurately predict the value for every single observation.&lt;/p&gt;
+
+&lt;h1 id=&quot;now-to-try-and-do-something-vaguely-interesting&quot;&gt;Now to try and do something vaguely interesting&lt;/h1&gt;
+
+&lt;p&gt;As someone working in NLP, I immediately wondered about the possibility of using this technique to encode word vectors. Not only that, but whether they would be worthwhile or not.
+A little searching on the internet makes it appear to me that this hasn’t been done, so over the next week or so I will attempt it. Prior to setting out, 
+here are a few thoughts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Where the hell do I even get a dataset from?&lt;/li&gt;
+  &lt;li&gt;Are we recording enough information about the relationship?&lt;/li&gt;
+  &lt;li&gt;Is a max-margin approach really going to give us the fine-grained control we want?&lt;/li&gt;
+  &lt;li&gt;How do I tell if this was a waste of time?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;fine-whatever&quot;&gt;Fine. Whatever&lt;/h1&gt;
+
+&lt;p&gt;As usual, I predict the first of these things will take the most of my concentration. That’s just how this machine learning caper works.
+More on this next time.&lt;/p&gt;
+
+&lt;p&gt;The second thing makes me wonder a bit. Normally when building word vectors, you work with co-occurrence of terms rather than explicitly with synonym relationships as implied by how FaceNet works.
+I wonder if this is really sensible, as it may constrain the types of information that can be encoded in a vector. That said, would this prove more useful for classification tasks?
+That seems to be one of the primary uses for FaceNet embeddings and they’re very, very handy in that setting.&lt;/p&gt;
+
+&lt;p&gt;Thirdly, the max-margin thing. The classic way of explaining why word vectors are worth the bother involves adding and subtracting them to then &lt;a href=&quot;https://twitter.com/goodfellow_ian/status/1133528189651677184?lang=en&quot;&gt;pretend they give you a reasonably intuitive answer&lt;/a&gt;.
+This property could potentially be disturbed by max-margin learning, because within a given set of synonyms the learning process wouldn’t necessarily make any attempt
+at organising the individual elements. On the other hand, a thesaurus can be regarded as a really massive pile of partially-overlapping sets, so this may not actually be a problem after all.&lt;/p&gt;
+
+&lt;p&gt;The last problem is the most annoying, because this boils down to qualitative analysis. I’ve got another whole blog post in mind about why qualitative analysis is a minefield and what can be done about it,
+but for now let’s just say that the problem here is that we can’t necessarily say definitively whether one set of embeddings is better than another.&lt;/p&gt;
+
+&lt;p&gt;Anyway, that’s what I’m going to try - very curious to see how it turns out!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;If you want a simpler explanation of how FaceNet works, &lt;a href=&quot;https://omoindrot.github.io/triplet-loss&quot;&gt;check this out&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">The problem of facial recognition is now pretty much solved thanks to FaceNet.1 The underpinning insight that makes it all come together is analogous to the way an SVM works. But have we done all we can with this rather novel form of network? If you want a simpler explanation of how FaceNet works, check this out. &amp;#8617;</summary></entry><entry><title type="html">What does “Manias, Panics and Crashes” teach us about ourselves?</title><link href="http://localhost:4000/2019/08/16/Manias_Panics_and_Crashes.html" rel="alternate" type="text/html" title="What does &quot;Manias, Panics and Crashes&quot; teach us about ourselves?" /><published>2019-08-16T00:00:00+10:00</published><updated>2019-08-16T00:00:00+10:00</updated><id>http://localhost:4000/2019/08/16/Manias_Panics_and_Crashes</id><content type="html" xml:base="http://localhost:4000/2019/08/16/Manias_Panics_and_Crashes.html">&lt;p&gt;One book I’ve been reading with a fair bit of interest recently is &lt;em&gt;Manias, Panics and Crashes&lt;/em&gt;, by the late Charles P. Kindleberger. 
+It’s a great read if you’ve got the stomach for reading about finance and is rightly a great of the genre in my view.&lt;/p&gt;
+
+&lt;p&gt;After making it a certain way in though, it becomes obvious that tales of swindling and finance are really just window dressing for the real subject matter.
+Many of the things in the book boil down to group psychology leading us in bad directions. Which is interesting in itself; bank runs are a perfect example of this.
+Bank runs are triggered by a collective loss of confidence in the ability of a bank to redeem deposits, yet also precisely create that same difficulty. 
+Leaving aside the obvious critique of supposedly infallible markets, this makes you wonder; in what other circumstances does one see this kind of thing?&lt;/p&gt;
+
+&lt;p&gt;Politics is one answer. Sport is another.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; It can happen in daily life, too. This got me wondering whether the approach to dealing with a financial panic sheds any light on how to avoid one personally.
+It seems like the most obvious advice is also the least enlightening: &lt;em&gt;don’t set yourself up for this in the first place&lt;/em&gt;. It’s also probably the hardest to implement in my opinion,
+because it’s quite difficult to continually live your life detached from the moment. Sometimes it simply doesn’t work like that, even. This isn’t to say that thinking about
+the lessons of herd behaviour from history can’t help us as individuals, but it’s not as simple as acting like a central bank if you’re going off-course.&lt;/p&gt;
+
+&lt;p&gt;Another thought that arises from the book is also worth remarking upon. It suggests that the incidence of fraud increases during bubble times because people want their wealth to grow &lt;em&gt;even&lt;/em&gt; faster. In turn, 
+the book also says the incidence of fraud grows in hard times because people feel driven to it by necessity. So when does the incidence of fraud go &lt;em&gt;down&lt;/em&gt;?
+If ever there was an inadvertent critique of our times I thought emblematic, it’s the one written in a mainstream history of capitalism that suggests that the incidence of fraud &lt;em&gt;almost always increases&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So that’s all good, then!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Ever seen your team choke because they collectively got too worried about protecting a lead? Boy, have I ever. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">One book I’ve been reading with a fair bit of interest recently is Manias, Panics and Crashes, by the late Charles P. Kindleberger. It’s a great read if you’ve got the stomach for reading about finance and is rightly a great of the genre in my view.</summary></entry><entry><title type="html">A Hack to Avoid Labelling Topic Classification Data</title><link href="http://localhost:4000/2019/07/27/Topic_Generation_Quickly.html" rel="alternate" type="text/html" title="A Hack to Avoid Labelling Topic Classification Data" /><published>2019-07-27T00:00:00+10:00</published><updated>2019-07-27T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/27/Topic_Generation_Quickly</id><content type="html" xml:base="http://localhost:4000/2019/07/27/Topic_Generation_Quickly.html">&lt;p&gt;Some of the tricks outlined in earlier posts add up to something that I’ve found useful. Specifically, they form a way of generating topic labels and from there classification models.
+In this post I’ll attempt to explain how it works.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-set-up&quot;&gt;The Set-up&lt;/h1&gt;
+
+&lt;p&gt;Imagine you’ve got a large amount of free text data, with no labels for the documents. You want to be able to classify them, so what can you do? 
+Here are your options:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Brain.png&quot; width=&quot;400&quot; height=&quot;600&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These options are ordered according to the amount of labour involved, with manual annotation the most and blogging the least.&lt;/p&gt;
+
+&lt;h1 id=&quot;manually-annotating-everything&quot;&gt;Manually Annotating Everything&lt;/h1&gt;
+
+&lt;p&gt;Urgh. At least get Mechanical Turk to do it or something. And while you’re at it, &lt;a href=&quot;https://fairwork.stanford.edu/&quot;&gt;it’s not hard to pay your workers fairly&lt;/a&gt;. This is obviously the most labourious choice, which causes a few problems. Firstly, it’s going to take you ages to actually get to the point where you know if this is working or not. Secondly, a lot of examples won’t really be useful because they’re a long way from your (hoped-for) decision boundary and therefore don’t really play much of a role in training. You’ll probably also run the risk of procrastinating, thereby lengthening an already unnecessarily long task.&lt;/p&gt;
+
+&lt;p&gt;There’s another sleeper problem here, as well. How do you know what the topics are before you start labelling? This is a killer. It’s easy to get partway through labelling a large number of documents only to realise your taxonomy is wrong, necessitating a restart.&lt;/p&gt;
+
+&lt;h1 id=&quot;semi-supervised-learning&quot;&gt;Semi-Supervised Learning&lt;/h1&gt;
+
+&lt;p&gt;This is a bit better. Instead of labelling everything, pick some stuff that represents a few topics you’re interested in and try to capture the latent structure of all the unlabelled data when you build a model. This involves potentially a lot less manual labour than the previous option, but there’s still a fair bit of work to do. There are other problems as well.&lt;/p&gt;
+
+&lt;p&gt;As with full manual annotation, you’re still stuck with the task of working out what is actually &lt;em&gt;in&lt;/em&gt; your data before manually labelling anything. Which is still the same chicken-and-egg problem. Another problem lurks in the question: how much is actually enough?
+Finally, semi-supervised learning is a bit tricky because of the weird likelihood function among other things. That said, on this last point &lt;a href=&quot;https://breakitdownto.earth/2019/07/12/Semi-Supervised_Learning_Trick.html&quot;&gt;shortcuts do exist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you’re feeling really advanced, you might try some sort of active learning after you’ve labelled some examples. In my experience this doesn’t work out as planned, because unless you’ve labelled heaps of data everything still looks novel to a classifier. You wind up just labelling all the examples you send to active learning. So that’s not really a shortcut either. Still, at least with this option you don’t necessarily do &lt;em&gt;as much&lt;/em&gt; manual labelling.&lt;/p&gt;
+
+&lt;h1 id=&quot;multi-part-modelling-weirdness&quot;&gt;Multi-part Modelling Weirdness&lt;/h1&gt;
+
+&lt;p&gt;Given that we need some idea of topics before we start labelling them, how can we achieve this? There are plenty of unsupervised tools out there, but let’s look at LDA (&lt;a href=&quot;https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation&quot;&gt;Latent Dirichlet Allocation&lt;/a&gt;, not &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_discriminant_analysis&quot;&gt;Linear Discriminant Analysis&lt;/a&gt;) for a second.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;When looking for topics in LDA, you have access to a parameter usually denoted &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;. This governs how broadly-defined the topics you’re looking for are. What you might consider doing is setting that to be something narrow (i.e. 0.8-0.9) and then using that to arrange your documents into small, similar clumps.&lt;/p&gt;
+
+&lt;p&gt;So far so good. Now for each topic you can just inspect a few of the most strongly-associated documents and decide what it’s about. This is still manual labour in a way, but not nearly as onerous and you get a lot more bang for your buck. For each document in, say, the top 10% by score of a given topic, label it with that topic. With an idea of what your topics are about you can put a few of them together in a class, giving rise to large amount of coherently labelled data with comparatively little work.&lt;/p&gt;
+
+&lt;p&gt;Now what you’re left with is a bunch of documents where you can be confident of their class membership and a much larger body that may or may not be members of the classes you’ve created. Which is basically the definition of PU-learning, so &lt;a href=&quot;https://breakitdownto.earth/2019/07/12/Semi-Supervised_Learning_Trick.html&quot;&gt;the trick I alluded to earlier&lt;/a&gt; applies here.&lt;/p&gt;
+
+&lt;p&gt;Long story short, if you use LDA to identify groupings of documents, you can turn them into classification labels easily. Then it’s just a matter of training your model in the right way. Simple!&lt;/p&gt;
+
+&lt;h1 id=&quot;writing-a-blog-about-it&quot;&gt;Writing a Blog About It&lt;/h1&gt;
+
+&lt;p&gt;Obviously the easiest bit. Ta da!&lt;/p&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">Some of the tricks outlined in earlier posts add up to something that I’ve found useful. Specifically, they form a way of generating topic labels and from there classification models. In this post I’ll attempt to explain how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/Brain.png" /></entry><entry><title type="html">Music as History</title><link href="http://localhost:4000/2019/07/19/Music_as_History.html" rel="alternate" type="text/html" title="Music as History" /><published>2019-07-19T00:00:00+10:00</published><updated>2019-07-19T00:00:00+10:00</updated><id>http://localhost:4000/2019/07/19/Music_as_History</id><content type="html" xml:base="http://localhost:4000/2019/07/19/Music_as_History.html">&lt;p&gt;A big part of why music is interesting to me derives from the way in which it illustrates the culture that brought it forward. To digress, and delve into the world of Iain M. Banks again, one of his &lt;em&gt;Culture&lt;/em&gt; books has the following to say&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;     Most civilisations that had acquired the means to build genuine Artificial Intelligences duly built them, and most of those designed or shaped the consciousness of the AIs to a greater or lesser extent; obviously if you were constructing a sentience that was or could easily become much greater than your own, it would not be in your interest to create a being which loathed you and might be likely to set about dreaming up ways to exterminate you.&lt;/p&gt;
@@ -352,339 +486,4 @@
       &lt;p&gt;Maybe Schmidhuber does. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">Oh my god this happens all the time I swear. If you’re working in machine learning then it is unavoidable that you work in the presence of uncertainty. This isn’t such a bad thing, but how we think as humans sometimes works against us when dealing with uncertainty. This post will look something that commonly goes wrong and more importantly, how to spot it so you can do something about it.</summary></entry><entry><title type="html">How to automatically shoot yourself in the foot</title><link href="http://localhost:4000/2019/06/12/Automated_Mistakes_with_AutoML.html" rel="alternate" type="text/html" title="How to automatically shoot yourself in the foot" /><published>2019-06-12T00:00:00+10:00</published><updated>2019-06-12T00:00:00+10:00</updated><id>http://localhost:4000/2019/06/12/Automated_Mistakes_with_AutoML</id><content type="html" xml:base="http://localhost:4000/2019/06/12/Automated_Mistakes_with_AutoML.html">&lt;p&gt;There are plenty of wonderful ways to screw up a perfectly good model. All of them share one common thread, which is that it’s always possible to shoot yourself in the foot. Even funnier (from my point of view at least), is that the urge to shoot oneself in the foot increases as the complexity of the model you’re working with does. In this post I’ll discuss one simple way of achieving a precision shot by means of automating a parameter search.&lt;/p&gt;
-
-&lt;p&gt;To be clear, let’s define shooting oneself in the foot:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;“Shooting oneself in the foot consists of the ML practitioner evading complexity for the sake of mental, rather than computational, tractability. None of that stuff goes away because you ignore it lol.”&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;Stephen Hogg, 2019&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This partly but not completely explains a fair bit of the interest in automating the search for an acceptable neural network architecture. Automating something like that isn’t necessarily bad, but it can be if it’s just being used to avoid thinking about how models work.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-computer-just-does-it-for-you&quot;&gt;The computer just does it for you&lt;/h1&gt;
-
-&lt;p&gt;Here’s a scenario that might lead you to want to partially automate things. You have a lot of text data and you need to discover topics in it. Obviously there are too many documents to read, so you use a model. One of the obvious candidates for doing this is Latent Dirichlet Allocation.&lt;/p&gt;
-
-&lt;p&gt;Basically, LDA seeks to create a link between the words that are present in the collection (hereafter corpus), of documents you have and a number of latent (i.e. unobserved), topics. What this means in practice is that if you have an idea of how many topics there are in a corpus you can then get LDA to work out how they’re defined.&lt;/p&gt;
-
-&lt;p&gt;The other piece of information LDA needs to work relates to the topics themselves. Specifically, how narrowly defined are they? Do you only need one or two words to establish the presence of a topic in a document, or more? Now how do we tell which values for our parameters are good? With a model like LDA, typically you’d evaluate the &lt;em&gt;per word perplexity&lt;/em&gt;. That’s a mouthful, so let’s start with the last word.&lt;/p&gt;
-
-&lt;h1 id=&quot;confused-yet&quot;&gt;Confused yet?&lt;/h1&gt;
-
-&lt;p&gt;Imagine you’re playing cards with someone. Normal deck of 52 as is common in the West, nothing too funny going on. Your opponent draws a card unseen to you. What could it be?&lt;/p&gt;
-
-&lt;p&gt;If you don’t know anything at all and have to make a wild guess, then there are 52 potential cards you could guess from. You have terrible odds of being right. In this case, your perplexity is 52 - the number of states you need to choose from.&lt;/p&gt;
-
-&lt;p&gt;If, on the other hand, you know what cards are in your own hand or have seen others previously, then you can eliminate them as possibilities. If you can eliminate, say 6 cards, then that leaves 46 possible cards your opponent may have drawn. So perplexity is now 46 and you’re still guessing, but with a bit more clarity. The idea with modelling is to drive that number even lower by having your model eliminate outcomes that aren’t really plausible. In this case it might be that your opponent’s behaviour indicates the presence or absence of a certain card - what this boils down to is using the data you have to narrow the scope of outcomes you think are possible. Which is a great way of describing what a model does.&lt;/p&gt;
-
-&lt;h1 id=&quot;this-all-seems-fine&quot;&gt;This all seems fine&lt;/h1&gt;
-
-&lt;p&gt;Going back to LDA (this is the &lt;em&gt;per word&lt;/em&gt; part of &lt;em&gt;per word perplexity&lt;/em&gt;), what gets measured is how strongly each word in the vocabulary of your corpus is associated to any one topic. If you have no idea which topic a word relates to, then perplexity will be equal to the number of topics. Equally, if a given word clearly relates to only one topic then perplexity drops to one. You’ll get a range of outcomes for the words you’re working with, so it just gets averaged and called &lt;em&gt;per word perplexity&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;So we have a couple of levers and a way of telling whether words are getting more or less tightly associated with topics. More is better, generally. So now we can rig up something to try a few different combinations of values for the number of topics and how narrowly defined they are, check the perplexity and pick whatever has the lowest score.&lt;/p&gt;
-
-&lt;p&gt;And that’s where things go wrong. Back when I used to work in a call centre, people used to constantly say that what gets measured, gets managed. So if all you worry about is the uniqueness of the relationship between words and topics, that’s what you’ll get!&lt;/p&gt;
-
-&lt;p&gt;It turns out that if you try to optimise both the number of topics and their narrowness at the same time, you wind up in either of two trivial cases.&lt;/p&gt;
-
-&lt;p&gt;1) One MASSIVE topic, strongly connected to every single word so that every document has the same primary topic&lt;/p&gt;
-
-&lt;p&gt;2) One topic per word, so that you haven’t really clustered anything at all and are really just calculating term frequency without realising&lt;/p&gt;
-
-&lt;p&gt;Both of these outcomes are rubbish, obviously. It’s worth noting that they could also appear by stealth: a configuration with 30 topics but all the words are associated to only one of them could happen, for example. You’d then inadvertently pick it as the optimal configuration and think everything is hunky dory because the parameters that led to that scenario don’t seem untoward.&lt;/p&gt;
-
-&lt;h1 id=&quot;time-to-eat-your-vegetables&quot;&gt;Time to eat your vegetables&lt;/h1&gt;
-
-&lt;p&gt;The warning that this was going to fail happened in the word “generally”, in the previous paragraph. How precisely did this stuff up, though?&lt;/p&gt;
-
-&lt;p&gt;Firstly, doing things this way basically consisted of trying to abstract away thinking about how the model works. Secondly, the phrase &lt;em&gt;what gets measured, gets managed&lt;/em&gt; really matters here. When automatically optimising something, first take a second to think. If you managed to get that score all the way down (or up), would that actually be the outcome you wanted? A lot of the time the answer is yes, but it’s the times when the answer is really no that will get you. Just a little bit of thinking saves a lot of work.&lt;/p&gt;
-
-&lt;p&gt;Another thing to think about is how ambitious you get about automatically optimising stuff. If you decided to have an opinion about the narrowness of topics, then your task would simply be a matter of employing something like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Elbow_method_(clustering)&quot;&gt;Elbow method&lt;/a&gt; to make a choice about the right number of topics. This is much less fraught because you now have some guardrails for the process. The same in reverse applies to fixing the number of topics and searching over the narrowness of their definition.&lt;/p&gt;
-
-&lt;p&gt;Finally, note that I have not recommended making the metric you optimise more complicated to account for some of these quirks. Down that road lies madness, but go ahead if you really want. Good luck with that haha.&lt;/p&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">There are plenty of wonderful ways to screw up a perfectly good model. All of them share one common thread, which is that it’s always possible to shoot yourself in the foot. Even funnier (from my point of view at least), is that the urge to shoot oneself in the foot increases as the complexity of the model you’re working with does. In this post I’ll discuss one simple way of achieving a precision shot by means of automating a parameter search.</summary></entry><entry><title type="html">How to obfuscate the fact that you’re not really doing AI</title><link href="http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html" rel="alternate" type="text/html" title="How to obfuscate the fact that you're not really doing AI" /><published>2019-06-06T00:00:00+10:00</published><updated>2019-06-06T00:00:00+10:00</updated><id>http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI</id><content type="html" xml:base="http://localhost:4000/2019/06/06/Obfuscating_a_lack_of_AI.html">&lt;p&gt;&lt;img src=&quot;/assets/img/D07CcPPXcAAKU5L.png&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oh my god this happens all the time I swear. What I’m talking about here is the thing where you build a model and think it works, but if you look closer it’s actually doing almost nothing. This post looks at a common yet (in my opinion) not widely discussed trap you (or better yet, someone else), can fall into.&lt;/p&gt;
-
-&lt;h2 id=&quot;even-simple-models-can-stuff-up&quot;&gt;Even simple models can stuff up&lt;/h2&gt;
-
-&lt;p&gt;Once upon a time I saw a logit model that was built to predict customer churn. The relevant group in charge of it had performance stats to back up their assertion that it worked well. But a quick glance suggested all was not as it seemed.&lt;/p&gt;
-
-&lt;p&gt;What gave this away? It’s pretty simple, in fact. The variables of the model were all pretty straightforward - indicators for variables, some customer history variables and some other stuff to handle the frequency of their interactions with the company. So far so good. The problem with all this becomes apparent when you look at the coefficients of the model. Almost all of them were near zero, except for the dummy variable for one product which was massive.&lt;/p&gt;
-
-&lt;p&gt;In other words, the model was just one giant &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; statement. If you had this product, you would churn, otherwise you wouldn’t. The reason this model seemed like it was ok was because customers with that particular product were indeed churning &lt;em&gt;en masse&lt;/em&gt;, such that it masked performance flaws elsewhere in the sample space.&lt;/p&gt;
-
-&lt;p&gt;In the course of a few months’ worth of trying to alert people to this, I realised that to accomplish that aim you need a good explanation for how that could have happened in the first place. This brings us to the villain of this particular story, a thing called &lt;em&gt;quasi-separation&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;separation-anxiety&quot;&gt;Separation anxiety&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-complete-or-quasi-complete-separation-in-logisticprobit-regression-and-how-do-we-deal-with-them/&quot;&gt;This page&lt;/a&gt; gives as good an explanation as any I’ve seen as to what’s going on here. Long story short, the dataset used to build the model has a severe bias in it, such that it’s possible to make predictions about the label with 100% confidence in some circumstances.&lt;/p&gt;
-
-&lt;p&gt;In the case I described above, what had happened was that the model was trained on a dataset that &lt;em&gt;contained no examples of a customer having that one product and also not churning&lt;/em&gt;. So maximum likelihood estimation takes that and runs with it and you wind up with a model that’s ridiculously oversensitive to this one variable. The confusion matrix shows this more clearly:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;churn&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;no churn&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Has product&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;125&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Doesn’t have product&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;20&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;50&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Any time you see a sample with the &lt;strong&gt;HAS_PRODUCT&lt;/strong&gt; flag, why wouldn’t you predict they churn? It’s a one-way bet.&lt;/p&gt;
-
-&lt;p&gt;This is a really clear-cut case, unfortunately this can still happen in slightly less obvious circumstances. In the link at the start of this section, they talk about a case of exact separation with a continuous instead of binary variable. Similarly, even if the 0 in that confusion matrix was a 2 or a 5 you’d still have the problem. This can also kick in if there’s a combination of variables that exactly splits your labels.&lt;/p&gt;
-
-&lt;p&gt;The most obvious knee-jerk reaction is to regularise your model, but that’s a band-aid. Really the data is the problem. And potentially the fact that you’re using a maximum likelihood technique. But that’s a matter for a separate rant some other time.&lt;/p&gt;
-
-&lt;p&gt;Now it’s time for a quick FAQ on what we’ve learned!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Q: My neural network doesn’t have that problem&lt;/p&gt;
-
-  &lt;p&gt;A: Yes it does. If you’ve got separation problems in your data, then you’re still stuffed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;how-would-i-know&quot;&gt;How would I know?&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-
-&lt;p&gt;The obvious thing is to run that confusion matrix for every categorical variable you’ve got and look for any that have a cell with barely any observations as a percentage of the total. You might also consider looking at a covariance matrix or two. The other thing you can do is just run your model and look for the signs that it has gone wrong. Remember, there are a few giveaways.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;One of the coefficients is orders of magnitude bigger than the others and the standard errors are massive because the model hasn’t really converged&lt;/li&gt;
-  &lt;li&gt;Some of your predictions are almost exactly zero or one - there should almost never be a reason for a model to be THAT confident&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This is almost surely going to happen to you at some point, if it hasn’t already. Good luck with that haha.&lt;/p&gt;
-
-&lt;p&gt;I bet at least a few start-ups have got models that are really doing this under the hood.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Ok fine, this is a Soundgarden joke. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/D07CcPPXcAAKU5L.png" /></entry><entry><title type="html">Two Cheers for StanfordNLP!</title><link href="http://localhost:4000/2019/05/25/Two_Cheers_for_Stanfordnlp.html" rel="alternate" type="text/html" title="Two Cheers for StanfordNLP!" /><published>2019-05-25T00:00:00+10:00</published><updated>2019-05-25T00:00:00+10:00</updated><id>http://localhost:4000/2019/05/25/Two_Cheers_for_Stanfordnlp</id><content type="html" xml:base="http://localhost:4000/2019/05/25/Two_Cheers_for_Stanfordnlp.html">&lt;p&gt;As you may or may not know, the &lt;a href=&quot;https://github.com/UniversalDependencies&quot;&gt;Universal Dependencies Github repo&lt;/a&gt; is an absolutely wonderful source of tagged NLP data that can be used for a wide variety problems. It’s worth reinforcing, it’s a great resource and an example to us all about where academic collaboration can lead.&lt;/p&gt;
-
-&lt;p&gt;So it’s nice to see people doing stuff with it. In particular, this means the latest work done in PyTorch by the &lt;a href=&quot;https://stanfordnlp.github.io/stanfordnlp/&quot;&gt;Stanford NLP group&lt;/a&gt;. Have a look around and you’ll see a very large range of pretrained models put together to solve quite a few different tasks. Look at the system performance page and you’ll see that they all work pretty well, too.&lt;/p&gt;
-
-&lt;p&gt;What’s the drawback, then?&lt;/p&gt;
-
-&lt;h2 id=&quot;what-if-we-tried-something-simpler&quot;&gt;What if we tried something simpler?&lt;/h2&gt;
-
-&lt;p&gt;One reasonable thing you might ask yourself is - how much better do these models perform than a much simpler version that accomplishes the same task? It’s actually pretty easy to get an answer to this, it turns out.&lt;/p&gt;
-
-&lt;p&gt;One of the prior works of the Stanford guys was &lt;a href=&quot;https://stanfordnlp.github.io/CoreNLP&quot;&gt;CoreNLP&lt;/a&gt;, which was originally written in Java and didn’t use any kind of neural network at all. Instead, it used [Conditional Random Fields], which are a kind of probabilistic graph. Leaving almost all of the differences between a CRF and the LSTM-based neural network approach aside, take it as read that the models you can use in CoreNLP are a lot, lot simpler.&lt;/p&gt;
-
-&lt;p&gt;All we really need to do is get the underlying data that was used to generate the PyTorch models and chuck it into CoreNLP and see what the results tell us.&lt;/p&gt;
-
-&lt;h2 id=&quot;results&quot;&gt;Results!&lt;/h2&gt;
-
-&lt;p&gt;For the purposes of this discussion, let’s focus on POS (part of speech) tagging. There are two reasons for this:
-1) That’s why I was doing this in the first place, and
-2) It’s a pretty common problem&lt;/p&gt;
-
-&lt;p&gt;Here’s a small table with accuracy stats for a few corpora from the Universal Dependencies repo.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Corpus&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;PyTorch&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;CoreNLP&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UD_Vietnamese-VTB&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;79.5&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;87.7&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UD_Indonesian-GSD&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;93.7&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;96.6&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;The more interesting thing than the details of these particular models is that they are outperforming the LSTM-based approach. That is, they’re both (heaps) faster and more accurate for this task using this dataset. Yes, this approach doesn’t consider every possible language, but hopefully with a few languages the point is already coming across.&lt;/p&gt;
-
-&lt;p&gt;So now what?&lt;/p&gt;
-
-&lt;h2 id=&quot;two-cheers&quot;&gt;Two cheers&lt;/h2&gt;
-
-&lt;p&gt;This post isn’t meant as an attempt at knocking StanfordNLP or anyone associated. Very far from it. The Stanford NLP group did us all a favour by putting these models together, not just because it gives you something to work with but also because in order to make progress in this field we actually have to try stuff out at some stage. Leading by doing and actually putting together a bunch of models on the back of UD data is a great way to encourage the usage of that dataset. They’re also owed a debt of gratitude for having done CoreNLP before that, which I personally use and find extremely handy.&lt;/p&gt;
-
-&lt;p&gt;Instead, the point of this exercise was to suggest that some of the problems we face in the field of machine learning aren’t going away. Bigger isn’t necessarily better when it comes to model complexity and any result needs to be viewed in context of a reasonable baseline. A lot of machine learning is a long, slow plod that you kind of just have to go through. But that doesn’t necessarily mean any part of it isn’t worth it.&lt;/p&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">As you may or may not know, the Universal Dependencies Github repo is an absolutely wonderful source of tagged NLP data that can be used for a wide variety problems. It’s worth reinforcing, it’s a great resource and an example to us all about where academic collaboration can lead.</summary></entry><entry><title type="html">Transformers: more than meets the eye? (Part 1: The Past)</title><link href="http://localhost:4000/2019/05/10/Transformers_part1.html" rel="alternate" type="text/html" title="Transformers: more than meets the eye? (Part 1: The Past)" /><published>2019-05-10T00:00:00+10:00</published><updated>2019-05-10T00:00:00+10:00</updated><id>http://localhost:4000/2019/05/10/Transformers_part1</id><content type="html" xml:base="http://localhost:4000/2019/05/10/Transformers_part1.html">&lt;p&gt;There’s quite a lot of talk about how wonderful Transformers are and how they solve a lot of problems. Fair enough, they are pretty good. That said, all the explanations I’ve seen so far include math and neural network diagrams (nothing wrong with that!). What I’m going to attempt to do is talk about how they work in a more conceptual way, because it’s much easier to understand the math and diagrams if you have some idea of why those equations even exist.&lt;/p&gt;
-
-&lt;p&gt;In this post I’ll attempt to walk through the history that got us to the point where Transformers (the neural network technique, for clarity), seemed like a good idea. There are a couple of things we’ll need to think about:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The situation we use a Transformer in - and why&lt;/li&gt;
-  &lt;li&gt;How have we evolved in thinking about how to deal with natural language?&lt;/li&gt;
-  &lt;li&gt;Why wasn’t any of the stuff we thought of in the past good enough? Why did we have to keep going and invent transformers?&lt;/li&gt;
-  &lt;li&gt;How do transformers work?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We’ll look at the first two points in this post and the second two in the next post. I’ll be assuming you know what you’re doing with neural networks, to at least some extent.&lt;/p&gt;
-
-&lt;p&gt;Hopefully what you’ll see at the end of all of this is that Transformers contain echoes of all the things that came before and that in conceptual terms they’re actually quite simple. Finally, I’m going to talk about this through the lens of Natural Language Processing (NLP), because that’s what these things get used for. If you’re interested in this with respect to financial time series stuff or otherwise, just squint really hard and imagine some of the words are replaced with whatever the appropriate domain-specific replacement is.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-problem-is-a-transformer-meant-to-solve&quot;&gt;What problem is a transformer meant to solve?&lt;/h2&gt;
-
-&lt;p&gt;This is actually the simple bit of these posts, if anything is. It’s what is known as  a &lt;em&gt;sequence to sequence&lt;/em&gt; problem. Also known as a &lt;em&gt;seq2seq&lt;/em&gt; problem if you’re one of the people who works on this sort of thing.&lt;/p&gt;
-
-&lt;p&gt;Now, what the heck is that?&lt;/p&gt;
-
-&lt;p&gt;Basically, it’s the sort of thing you see over and over in NLP. Translation is a perfect example. Take for instance the following input and output pair:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Input : I do want to eat vegetables
-Output: 我想吃蔬菜&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The goal of this task is to turn the input (English), into the output (Mandarin). Clearly, the input is just a bunch of words and so is the output. BUT! The order in which they appear matters. To see this in action, the input “do I want to eat vegetables” clearly has a different meaning. Some languages might have less of a problem with this than others, but in any event it’s a real source of information that we want to incorporate when we’re working on this problem. So the challenge is, how to predict a sequence of values - not necessarily words, it could be a financial time series problem you’re working on - using not just the knowledge of the input values but their structure (i.e. order), as well.&lt;/p&gt;
-
-&lt;p&gt;Just to briefly emphasise, this general type of problem has existed forever. People creating neural networks didn’t invent this type of problem, only new ways of solving it.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;important-digression&quot;&gt;Important digression!&lt;/h3&gt;
-&lt;p&gt;Looking at the above example and a great deal of explanatory material on the topic of &lt;em&gt;seq2seq&lt;/em&gt; problems, there’s a common problem you can encounter. It’s this: the problem looks like the input and output are concurrent, but they actually aren’t.&lt;/p&gt;
-
-&lt;p&gt;The way the problem works is, you feed in an input sequence and then want your model to complete the sequence. So really, the input and output pair above should be presented more like this:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;I do want to eat vegetables &lt;strong&gt;BREAK&lt;/strong&gt; 我想吃蔬菜&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The reason for the &lt;strong&gt;BREAK&lt;/strong&gt; there is that you need something to tell your model to stop reading input and start generating output.&lt;/p&gt;
-
-&lt;p&gt;This will become very important as time goes on in this discussion.&lt;/p&gt;
-
-&lt;h2 id=&quot;baby-steps&quot;&gt;Baby steps&lt;/h2&gt;
-&lt;p&gt;Ok so first let’s step back in time.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; In the beginning (and I mean &lt;em&gt;actually&lt;/em&gt; a long time ago, like 40 years or more), we didn’t have any of the gleaming mathematical machinery we now do for working on language problems. So where to start?&lt;/p&gt;
-
-&lt;h3 id=&quot;n-grams&quot;&gt;N-grams&lt;/h3&gt;
-&lt;p&gt;This was the first, and simplest go at trying to figure out the &lt;em&gt;what comes next?&lt;/em&gt; problem beyond just feeding in your input and hoping for the best. The idea here is that you can actually do a better job of predicting the next word if you use not only the current one, but the one before it. All the “N” in “N-grams” tells you is that you might use more or less context as opposed to specifically one or two words of history. The following examples might make things clearer.&lt;/p&gt;
-
-&lt;p&gt;Guess the next word given the input:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;is&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is basically impossible, right? There’s some stuff that might not be that likely to come next, but by and large we can’t really narrow it down.&lt;/p&gt;
-
-&lt;p&gt;What about this input:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;weather is&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is a bit more workable. We could probably make a few guesses about what goes next, but it’s definitely a narrower scope of possibilities than last time.&lt;/p&gt;
-
-&lt;p&gt;Now what about this:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The weather is&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;At this point I’m fairly sure something like &lt;em&gt;hot&lt;/em&gt; or &lt;em&gt;cold&lt;/em&gt; comes next.&lt;/p&gt;
-
-&lt;p&gt;So far so good, but what’s the cost? It’s pretty simple, in fact. Firstly, the reason we know one of those words comes next is because we’ve all watched too much news on the TV so far in this life. That’s well and good for a human, but sometimes you don’t have enough data for that to work for a machine.&lt;/p&gt;
-
-&lt;p&gt;Another problem arises if you’re trying to predict more than just the next word. If you’re trying to predict a whole sentence, you’re in a lot of trouble. Maybe you can get the first word of your output correct, but after that you’re at the mercy of whatever you predicted as your first word. If that’s wrong, everything else becomes even wronger. We’ve only really started solving this problem comparatively recently.&lt;/p&gt;
-
-&lt;p&gt;Even worse, the longer your input sequence the rarer it is! In the case of “The weather is”, you might be able to see it a few times in a dataset if you’re lucky. But not as many times as you see “weather is”, perhaps. So we’re stuck in a classic problem where we can get a few edge cases right all of the time, or have hopefully better than random performance over a much broader set of cases, assuming your input doesn’t fundamentally change as time goes on. That’s probably not good enough. So people kept researching stuff.&lt;/p&gt;
-
-&lt;h3 id=&quot;time-becomes-a-loop&quot;&gt;Time becomes a loop&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-&lt;p&gt;Another thing that people discovered when talking about &lt;em&gt;seq2seq&lt;/em&gt; problems is that sometimes stuff a long time ago in your input sequence actually matters in terms of the prediction you make at the end of it. Doing stuff with N-grams won’t work here because for example a 128-gram is basically unique. You’ll only every see that sequence of tokens the once, if at all, so it’s no use for prediction. So what can you do about this?&lt;/p&gt;
-
-&lt;p&gt;This is where things start getting complicated, unfortunately. That is to say, as soon as you try and do anything beyond the most basic stuff with a &lt;em&gt;seq2seq&lt;/em&gt; problem, it gets complicated.&lt;/p&gt;
-
-&lt;p&gt;Intuitively, what we want is something that can remember the earlier parts of a sequence like this:&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;I was born in a water moon. Some people, especially its inhabitants, called it a planet, but as it was only a little over two hundred kilometres in diameter, ‘moon’ seems the more accurate term. The moon was made entirely of water, by which I mean it was a globe that not only had no land, but no rock either, a sphere with no solid core at all, just liquid water, all the way down to the very centre of the globe.&lt;/p&gt;
-
-  &lt;p&gt;If it had been much bigger the moon would have had a core of ice, for water, though supposedly incompressible, is not entirely so, and will change under extremes of pressure to become ice. (If you are used to living on a planet where ice floats on the surface of water, this seems odd and even wrong, but nevertheless it is the case.) The moon was not quite of a size for an ice core to form, and therefore one could, if one was sufficiently hardy, and adequately proof against the water pressure, make one’s way down, through the increasing weight of water above, to the very centre of the moon.&lt;/p&gt;
-
-  &lt;p&gt;Where a strange thing happened.&lt;/p&gt;
-
-  &lt;p&gt;For here, at the very centre of this watery globe, there seemed to be no gravity. There was colossal pressure, certainly, pressing in from every side, but one was in effect weightless (on the outside of a planet, moon or other body, watery or not, one is always being pulled towards its centre; once at its centre one is being pulled equally in all directions), and indeed the pressure around one was, for the same reason, not quite as great as one might have expected it to be, given the mass of water that the moon was made up from.&lt;/p&gt;
-
-  &lt;p&gt;This was, of course,&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Imagine you’re trying to guess what comes next after “This was, of course,”. Do you think it’s something about the physics stuff towards the end of the passage, or about the perspective of people who live on planets where ice floats on the surface referred to much earlier in the text? It could be either, but if your model isn’t capable of having some way of hanging onto relevant info from much earlier in your input sequence, you have no choice. You can only really consider the physics option.&lt;/p&gt;
-
-&lt;p&gt;So we needed some way of hanging onto not everything but at least some important info from the earlier parts of a potentially long sequence. This is where neural networks start to play a role.&lt;/p&gt;
-
-&lt;p&gt;The original go at this involved trying to get a neural network to have a memory of its own, after a fashion.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; I don’t want to go on forever about this because it turns into talking about math, but the long and the short of it was that you wanted a bit of your network to loop around on itself in a way that made some of the information coming in from a given sequence element take a while to get back out again.&lt;/p&gt;
-
-&lt;p&gt;It’s a bit like Gumbo. &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; This is a slightly weird analogy, but stick with me. Gumbo is this dish you get in the southern parts of the U.S. that takes &lt;em&gt;forever&lt;/em&gt; to cook. But the trick is to make it so that the flavour of the ingredients you put in early on is still retained some hours later in the pot when you finally finish cooking, even if you’ve taken that ingredient back out.&lt;/p&gt;
-
-&lt;p&gt;In our case, we want to put words in and move on to subsequent parts of the sequence without necessarily losing all of the earlier flavour. By the time we get to the end of that passage I put in above, we still want to be able to have some hint of the earlier part where the speaker says his planet was a moon.&lt;/p&gt;
-
-&lt;p&gt;In practical terms, what you do is make information take a really long path to get out of your network. Problem is, this isn’t perfect either. For a really long sequence, you can wind up with a gigantic number of parameters in your network. You also don’t really know what to hang on to, so by creating a recurrent neural network all you’re really doing is trying to hang on to as much of your input information as possible for as long as possible. This is on top of the other problem where introducing recurrence makes it slower to process an input sequence because now you have a dependency problem: you can only process some of your input after you’ve processed the bits that came before.&lt;/p&gt;
-
-&lt;p&gt;That said, it’s still a big big step forward.&lt;/p&gt;
-
-&lt;h3 id=&quot;my-model-accurately-predicts-everything&quot;&gt;My model accurately predicts everything!&lt;/h3&gt;
-&lt;p&gt;The next step forward after recurrence seemed at first like it solved everything. We’ll see that wasn’t the case though.&lt;/p&gt;
-
-&lt;p&gt;It turns out two of the problems with the basic approach to recurrence can be solved in the same way. The non-selectiveness of memory storage in a basic recurrent net and the escalating number of parameters needed were both addressed by the Long Short-Term Memory cell.&lt;/p&gt;
-
-&lt;p&gt;What this thing did differently was conceptually simple enough. Rather than just adding links between cells in a neural network so that it took a while for information to find the exit, each cell now got its own memory storage.&lt;/p&gt;
-
-&lt;p&gt;As always, so far so good. With this particular invention, you could get to the end of a passage like the one in the previous section and have some sort of useful numerical information from earlier on predict what comes next.&lt;/p&gt;
-
-&lt;p&gt;Going back to the first example I gave:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;I do want to eat vegetables &lt;strong&gt;BREAK&lt;/strong&gt; 我想吃蔬菜&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Now that we have an LSTM to work with, the input sequence can comfortably be quite large and we’ll still have all of it to work with when we start predicting an output sequence.&lt;/p&gt;
-
-&lt;p&gt;That’s another big step forward, but there’s still a problem here. Now, although we have a lot of information to work with when we start predicting an output sequence, we still have the problem that the sequence is only as good as the first prediction.&lt;/p&gt;
-
-&lt;p&gt;That is to say, we need the entire sequence to be meaningfully encoded in whatever you have after you’ve looked at the last item in your input. It also has to be able to let you spell out the entire output sequence. And when you do, you’re still stuck with the problem that your second prediction depends on your first one and your third prediction depends on your second one.&lt;/p&gt;
-
-&lt;p&gt;Also this LSTM stuff is relatively slow because you have to process one element of your sequence at a time and there’s no real way around that in the framework. That said, as always, it was a big leap forwards and started to show some serious potential for dealing with &lt;em&gt;seq2seq&lt;/em&gt; problems.&lt;/p&gt;
-
-&lt;p&gt;Wouldn’t it make more sense and potentially be faster if we could use all of the bits of the input sequence independently in determining an output, instead of pancaking the information you have up against an invisible wall separating your input sequence and whatever comes next? This question is more or less what the Attention method and Transformers grow out of. I’ll talk about why next time.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Just in case anyone was wondering. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;This is secretly a joke. If you work out what I’m referring to, I’m not sorry. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DNb4VKln1uw&quot;&gt;https://www.youtube.com/watch?v=DNb4VKln1uw&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;From &lt;em&gt;The Algebraist&lt;/em&gt; by Iain M. Banks. R.I.P. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;Not as cool as anything invented by Miles Bennett Dyson, but still. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gumbo#Preparation_and_serving&quot;&gt;https://en.wikipedia.org/wiki/Gumbo#Preparation_and_serving&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">There’s quite a lot of talk about how wonderful Transformers are and how they solve a lot of problems. Fair enough, they are pretty good. That said, all the explanations I’ve seen so far include math and neural network diagrams (nothing wrong with that!). What I’m going to attempt to do is talk about how they work in a more conceptual way, because it’s much easier to understand the math and diagrams if you have some idea of why those equations even exist.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Stephen Hogg</name></author><summary type="html">Oh my god this happens all the time I swear. If you’re working in machine learning then it is unavoidable that you work in the presence of uncertainty. This isn’t such a bad thing, but how we think as humans sometimes works against us when dealing with uncertainty. This post will look something that commonly goes wrong and more importantly, how to spot it so you can do something about it.</summary></entry></feed>

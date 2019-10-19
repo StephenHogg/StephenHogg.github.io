@@ -36,7 +36,7 @@ Expanding further on the Bayes factor, Simonsohn says:
 
 > The BF for the pregnancy test is simple because the alternative hypothesis involves only one possibility: "being pregnant". But BFs are usually complicated because the alternative hypotheses they consider include many possibilities.
 
-This seems obviously wrong: "being pregnant" is not a hypothesis, null or alternative. If instead "being pregnant" is not what he means to be a hypothesis, then what does he think is? One of the easiest ways to wind up with methodological problems is to not actually spell out in black and white the necessary background to a given claim. So the Bayes factor is discussed without mention of the hypotheses it is testing in the previous quote and in this one he rejects the Bayes factor as unnecessarily complicated without providing any evidence to support that claim.
+This seems obviously wrong: "being pregnant" is not a hypothesis, null or alternative. If instead "being pregnant" is not what he means to be a hypothesis, then what does he think is? One of the easiest ways to wind up with methodological problems is to not actually spell out in black and white the necessary background to a given claim. So the Bayes factor is inaccurately defined without mention of the hypotheses it is testing in the previous quote and in this one he rejects the Bayes factor as unnecessarily complicated without providing any evidence to support that claim.
 
 ### Fundamental misunderstanding of hypothesis testing
 
@@ -60,7 +60,7 @@ note that one doesn't reject an alternative hypothesis either, only the null. An
 
 > 5. The default "the alternative", e.g., the one used by the BayesFactors R package, involves a distribution centered at zero, and where every real number is possible, thus any observed value is consistent with the alternative defined this way, and therefore, every time you accept the null, you have observed a value that 'the alternative' gives some probability to being true.  But this does not need to be the case. The alternative could be just one value (see previous footnote). Also, the null could be defined around zero not exactly at zero so here some observed values would belong to the null and not to the alternative. But, even in this latter case, it will still quite often be the case that a value predicted by the alternative and not by the null will lead the Bayes factor to support the null
 
-and another entire blog post that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
+and [another entire blog post](http://datacolada.org/42) (click for link) that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
 
 This wouldn't be as big of a deal if he were talking about a comparison of two theories without either having a privileged "null" position in the test.[^6] But he's talking (repeatedly), about a "null" hypothesis so it's hard not to conclude that he's thinking about all of this in terms of the classical null hypothesis significance test.
 

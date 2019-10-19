@@ -56,6 +56,10 @@ and
 >
 > 1. Accepting the null when "the alternative" you consider, and reject, does not represent the theory of interest.
 
+and in the footnotes
+
+> 5. The default "the alternative", e.g., the one used by the BayesFactors R package, involves a distribution centered at zero, and where every real number is possible, thus any observed value is consistent with the alternative defined this way, and therefore, every time you accept the null, you have observed a value that 'the alternative' gives some probability to being true.  But this does not need to be the case. The alternative could be just one value (see previous footnote). Also, the null could be defined around zero not exactly at zero so here some observed values would belong to the null and not to the alternative. But, even in this latter case, it will still quite often be the case that a value predicted by the alternative and not by the null will lead the Bayes factor to support the null
+
 ### Final thoughts
 
  The most fundamental of these is his use of the phrase "accept the null". This is flat out wrong and suggests he may not fully understand how hypothesis testing works. Particularly given that there's [another blog post by him](http://datacolada.org/42) that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]

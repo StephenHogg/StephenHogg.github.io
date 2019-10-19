@@ -51,9 +51,9 @@ This is, unfortunately, categorically incorrect. "Accepting the null" is not one
 and 
 
 > In sum.
-
+>
 > To use Bayes factors to test hypotheses: you need to be OK with the following two things:
-
+>
 > 1. Accepting the null when "the alternative" you consider, and reject, does not represent the theory of interest.
 
 ### Final thoughts

@@ -54,7 +54,7 @@ and
 >
 > To use Bayes factors to test hypotheses: you need to be OK with the following two things:
 >
-> 1. Accepting the null when "the alternative" you consider, and reject, does not represent the theory of interest.
+> \1. Accepting the null when "the alternative" you consider, and reject, does not represent the theory of interest.
 
 note that one doesn't reject an alternative hypothesis either, only the null. And in the footnotes:
 
@@ -76,7 +76,7 @@ Cast your mind back to the very first example I talked about, and the risk of a 
 >
 >...
 >
->2. Rejecting a theory after observing an outcome that the theory predicts.
+> \2. Rejecting a theory after observing an outcome that the theory predicts.
 
 So the point being made here, is that if you see evidence consistent with your hypothesis, it would be wrong to do anything other than treat your hypothesis as proven. This is absolutely a recipe for false positives, for the correlation-versus-causation reasons discussed above among other things. Further, you don't need to use a Bayes factor in your investigations to make this mistake - all you need to do is have a confirmation bias. So this, and the other, recommendation that Professor Simonsohn makes about the use of the Bayes factor should be disregarded, in my view. There are problems with every framework, including the Bayesian one, but those problems aren't the ones that Professor Simonsohn talks about in his blog post.
 

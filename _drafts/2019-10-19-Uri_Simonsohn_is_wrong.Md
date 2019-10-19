@@ -70,6 +70,8 @@ Why is all this wrong? What are the consequences?
 
  After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. The problem is, I'm inclined to believe that he doesn't either. So while I agree with the cause he's taken upon himself, I have to say I'm a bit worried about whether he's doing more harm than good. 
  
+ It's a funny old world!
+ 
  [^1]: Who shall, of course, remain nameless
  [^2]: It's never acceptable to do so - I'll try and spell out why.
  [^3]: I'll give the author that he's choosing amusing names at least

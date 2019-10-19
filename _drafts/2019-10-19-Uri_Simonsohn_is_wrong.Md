@@ -16,9 +16,9 @@ The post starts off with this vignette:
 >Would raising the minimum wage by $4 lead to greater unemployment? Milton, a Chicago economist, has a theory (supply and demand) that says so. Milton believes the causal effect is anywhere between 1% and 10%. After the minimum wage increase of $4, unemployment goes up 1%.  Milton feels bad about the unemployed but good about his theory.
 >But then, Thomas, a Bayesian colleague, tells Milton to wipe that smile on his face, because his prediction was wrong. The Bayes factor for that 1% increase in unemployment 'supports the null' of no effect of wage on unemployment.
 
-I don't actually have a problem with "Thomas"[^3] saying that. The argument here basically amounts to saying that if we observe evidence consistent with our hypothesis, then we should view it as the correct working theory of the world. I don't think it's as simple as that though - just because something you predicted happened, _doesn't mean it happened for the reason you suspect_. So what "Thomas" is saying in this example is that although the evidence you have may be consistent with your theory, that doesn't necessarily amount to something that could change your view of the world. Nowhere in this example is it made clear that the rise in unemployment is _specifically because_ of the increase in the minimum wage. Instead, "Milton" sees a correlation between these two measures and then ascribes the cause for fluctuations in the unemployment rate to the minimum wage change. So there's nothing wrong with "Thomas" telling a researcher to hold his horses, because there may be something else at play. The Bayes factor can reveal issues like this.[^4]
+I don't actually have a problem with "Thomas"[^3] saying that. The argument here basically amounts to saying that if we observe evidence consistent with our hypothesis, then we should view it as the correct working theory of the world. I don't think it's as simple as that though - just because something you predicted happened, _doesn't mean it happened for the reason you suspect_. So what "Thomas" is saying in this example is that although the evidence you have may be consistent with your theory, that doesn't necessarily amount to something that could change your view of the world. Nowhere in this example is it made clear that the rise in unemployment is _specifically because_ of the increase in the minimum wage. Instead, "Milton" sees a correlation between these two measures and then ascribes the cause for fluctuations in the unemployment rate to the minimum wage change. So there's nothing wrong with "Thomas" telling a researcher to hold his horses, because there may be something else at play. 
 
-It's ironic that Professor Simonsohn has a problem with this exchange, given that the paper of his I linked above is about the prevalence of false positives being published in the experimental social science literature. Disregarding what "Thomas" is saying here could lead to precisely that happening!
+It's ironic that Professor Simonsohn sees this exchange as undesirable, given that the paper of his I linked above is about the prevalence of false positives being published in the experimental social science literature. Disregarding what "Thomas" is saying here could lead to precisely that happening!
 
 ### Partial understanding of the Bayes Factor
 
@@ -68,6 +68,8 @@ How does a null hypothesis significance test work, then? It's kind of complex ye
 
 I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor.
 
+Cast your mind back to the very first example I talked about - 
+
 
 
 ### Final thoughts
@@ -81,6 +83,5 @@ I should note, this is not to say that the null hypothesis test framework as it 
  [^1]: Who shall, of course, remain nameless
  [^2]: It's never acceptable to do so - I'll try and spell out why.
  [^3]: I'll give the author that he's choosing amusing names at least
- [^4]: More on this later
  [^5]: What constitutes conclusive evidence is of course another matter
  [^6]: It still would be, though

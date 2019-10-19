@@ -64,19 +64,31 @@ and another entire blog post that is in fact entitled "Accepting the Null" and i
 
 This wouldn't be as big of a deal if he were talking about a comparison of two theories without either having a privileged "null" position in the test.[^6] But he's talking (repeatedly), about a "null" hypothesis so it's hard not to conclude that he's thinking about all of this in terms of the classical null hypothesis significance test.
 
-How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5]. So the idea is that you never reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
+How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5] You're not supposed to ever reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
 
 I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor.
 
-Cast your mind back to the very first example I talked about - 
+### False positives
 
+Cast your mind back to the very first example I talked about, and the risk of a false positive arising in a situation like that. Now look at this remark:
 
+>In sum.
+>
+>...
+>
+>2. Rejecting a theory after observing an outcome that the theory predicts.
+
+So the point being made here, is that if you see evidence consistent with your hypothesis, it would be wrong to do anything other than treat your hypothesis as proven. This is absolutely a recipe for false positives, for the correlation-versus-causation reasons discussed above among other things. Further, you don't need to use a Bayes factor in your investigations to make this mistake - all you need to do is have a confirmation bias. So this, and the other, recommendation that Professor Simonsohn makes about the use of the Bayes factor should be disregarded, in my view. There are problems with every framework, including the Bayesian one, but those problems aren't the ones that Professor Simonsohn talks about in his blog post.
 
 ### Final thoughts
+
+There's more to talk about here, but let's wrap it up.
 
  After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for what is absolutely an admirable change within his chosen field of research.
  
  If you'd like some more reading about the Bayes factor that sheds greater light on the way hypothesis testing and Bayesian statistics work together, I heartily recommend [this presentation](https://modeling.uconn.edu/wp-content/uploads/sites/1188/2016/05/Bayes-Factor-Null-Hypothesis-Tests-are-still-Null-Hypothesis-Tests.pdf) from Matt Williams.
+ 
+ Finally, I've emailed the link to this to Professor Simonsohn and his co-authors seeking comment. It's fair that they have a right of reply, so if they choose to do so I will add it to this post.
  
  It's a funny old world!
  

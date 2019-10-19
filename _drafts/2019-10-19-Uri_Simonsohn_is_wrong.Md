@@ -30,7 +30,7 @@ He's kind of onto something with the horse race analogy, but otherwise this isn'
 
 $$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} = \frac{p(M_{1}|D)}{p(M_{0}|D)} \Big/ \frac{p(M_{0})}{p(M_{1})}  $$
 
-As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture. Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour. What that example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand. So it doesn't make sense to be talking about the Bayes factor in this puported example.
+As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture. Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour _or against_. What the above example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand. So it doesn't make sense to be talking about the Bayes factor in this puported example.
 
 Expanding further on the Bayes factor, Simonsohn says:
 
@@ -44,7 +44,7 @@ To skip forward a little, Professor Simonsohn then provides this quote:
 
 > If it is sufficiently closer to 0%, we "accept" the null.
 
-This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn. Before anyone tries to get out of this one by saying it was in quotation marks, here are some other usages of it throughout the blog post:
+This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn. Before anyone tries to get out of this one by saying it was in quotation marks, here are some other usages of it throughout the blog post:
 
 > What would it take for you to conclude that the minimum wage does not increase unemployment? If you are like me, it would be something like this "if the estimated effect on unemployment were close enough to zero to rule out consequential effects, I will accept the null."
 
@@ -56,7 +56,7 @@ and
 >
 > 1. Accepting the null when "the alternative" you consider, and reject, does not represent the theory of interest.
 
-and in the footnotes
+note that one doesn't reject an alternative hypothesis either, only the null. And in the footnotes:
 
 > 5. The default "the alternative", e.g., the one used by the BayesFactors R package, involves a distribution centered at zero, and where every real number is possible, thus any observed value is consistent with the alternative defined this way, and therefore, every time you accept the null, you have observed a value that 'the alternative' gives some probability to being true.  But this does not need to be the case. The alternative could be just one value (see previous footnote). Also, the null could be defined around zero not exactly at zero so here some observed values would belong to the null and not to the alternative. But, even in this latter case, it will still quite often be the case that a value predicted by the alternative and not by the null will lead the Bayes factor to support the null
 
@@ -84,7 +84,7 @@ So the point being made here, is that if you see evidence consistent with your h
 
 There's more to talk about here, but let's wrap it up.
 
- After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for what is absolutely an admirable change within his chosen field of research.
+ After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simplest one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for what is absolutely an admirable change within his chosen field of research.
  
  If you'd like some more reading about the Bayes factor that sheds greater light on the way hypothesis testing and Bayesian statistics work together, I heartily recommend [this presentation](https://modeling.uconn.edu/wp-content/uploads/sites/1188/2016/05/Bayes-Factor-Null-Hypothesis-Tests-are-still-Null-Hypothesis-Tests.pdf) from Matt Williams.
  

@@ -28,7 +28,7 @@ To explain how the Bayes factor works, Simonsohn poses this example:
 
 He's kind of onto something with the horse race analogy, but otherwise this isn't quite right. Let's start with a definition of the Bayes Factor. According to page 165 of _Machine Learning_ by Kevin P. Murphy, it can be written as follows:
 
-$$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} = \frac{p(M_{1}|D)}{p(M_{0}|D)} \Big/ \frac{p(M_{1})}{p(M_{0})}  $$
+$$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} = \frac{p(M_{1}|D)}{p(M_{0}|D)} \Big/ \frac{p(M_{0})}{p(M_{1})}  $$
 
 As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture. Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour. What that example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand. So it doesn't make sense to be talking about the Bayes factor in this puported example.
 

@@ -62,13 +62,17 @@ and in the footnotes
 
 and another entire blog post that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
 
-Why is all this wrong? What are the consequences?
+This wouldn't be as big of a deal if he were talking about a comparison of two theories without either having a privileged "null" position in the test.[^6] But he's talking (repeatedly), about a "null" hypothesis so it's hard not to conclude that he's thinking about all of this in terms of the classical null hypothesis significance test.
+
+How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5]. So the idea is that you never reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
+
+I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor.
 
 
 
 ### Final thoughts
 
- After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. The problem is, I'm inclined to believe that he doesn't either. So while I agree with the cause he's taken upon himself, I have to say I'm a bit worried about whether he's doing more harm than good. 
+ After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for what is absolutely an admirable change within his chosen field of research.
  
  It's a funny old world!
  
@@ -76,3 +80,5 @@ Why is all this wrong? What are the consequences?
  [^2]: It's never acceptable to do so - I'll try and spell out why.
  [^3]: I'll give the author that he's choosing amusing names at least
  [^4]: More on this later
+ [^5]: What constitutes conclusive evidence is of course another matter
+ [^6]: It still would be, though

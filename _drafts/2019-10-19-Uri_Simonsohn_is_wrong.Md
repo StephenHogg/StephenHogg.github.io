@@ -28,7 +28,7 @@ To explain how the Bayes factor works, Simonsohn poses this example:
 
 This isn't quite right. Let's start with a definition of the Bayes Factor. According to page 165 of _Machine Learning_ by Kevin Murphy, it can be written as follows:
 
-$$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} \Big/ \frac{p(M_{1})}{p(M_{0})}  $$
+$$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} \eq \frac{p(D|M_{1})}{p(D|M_{0})} \Big/ \frac{p(M_{1})}{p(M_{0})}  $$
 
 ### Final thoughts
 

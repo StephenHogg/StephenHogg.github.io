@@ -74,6 +74,8 @@ I should note, this is not to say that the null hypothesis test framework as it 
 
  After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for what is absolutely an admirable change within his chosen field of research.
  
+ If you'd like some more reading about the Bayes factor that sheds greater light on the way hypothesis testing and Bayesian statistics work together, I heartily recommend [this presentation](https://modeling.uconn.edu/wp-content/uploads/sites/1188/2016/05/Bayes-Factor-Null-Hypothesis-Tests-are-still-Null-Hypothesis-Tests.pdf) from Matt Williams.
+ 
  It's a funny old world!
  
  [^1]: Who shall, of course, remain nameless

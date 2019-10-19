@@ -60,9 +60,15 @@ and in the footnotes
 
 > 5. The default "the alternative", e.g., the one used by the BayesFactors R package, involves a distribution centered at zero, and where every real number is possible, thus any observed value is consistent with the alternative defined this way, and therefore, every time you accept the null, you have observed a value that 'the alternative' gives some probability to being true.  But this does not need to be the case. The alternative could be just one value (see previous footnote). Also, the null could be defined around zero not exactly at zero so here some observed values would belong to the null and not to the alternative. But, even in this latter case, it will still quite often be the case that a value predicted by the alternative and not by the null will lead the Bayes factor to support the null
 
+and another entire blog post that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
+
+Why is all this wrong? What are the consequences?
+
+
+
 ### Final thoughts
 
- The most fundamental of these is his use of the phrase "accept the null". This is flat out wrong and suggests he may not fully understand how hypothesis testing works. Particularly given that there's [another blog post by him](http://datacolada.org/42) that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
+ After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simple one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. The problem is, I'm inclined to believe that he doesn't either. So while I agree with the cause he's taken upon himself, I have to say I'm a bit worried about whether he's doing more harm than good. 
  
  [^1]: Who shall, of course, remain nameless
  [^2]: It's never acceptable to do so - I'll try and spell out why.

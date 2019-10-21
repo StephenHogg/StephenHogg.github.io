@@ -66,7 +66,7 @@ This wouldn't be as big of a deal if he were talking about a comparison of two t
 
 How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5] You're not supposed to ever reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
 
-I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor. The consequence of this, I think, is some of the other things identified in this post to do with over-eagerly embracing data that appears to validate a hypothesis. 
+I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor. The consequence of this, I think, is the over-eager embrace data that appears to validate a hypothesis that occurs in his examples. 
 
 ### The tool isn't necessarily the problem
 
@@ -108,7 +108,7 @@ There's more to talk about here, but let's wrap it up.
  
  If you'd like some more reading about the Bayes factor that sheds greater light on the way hypothesis testing and Bayesian statistics work together, I heartily recommend [this presentation](https://modeling.uconn.edu/wp-content/uploads/sites/1188/2016/05/Bayes-Factor-Null-Hypothesis-Tests-are-still-Null-Hypothesis-Tests.pdf) from Matt Williams as a jumping-off point. Without being personally invested in Bayesian methodology (seeing as I don't use it much), I'm more than happy to point interested parties in the direction of more.
  
- Finally, I've emailed the link to this to Professor Simonsohn seeking comment. It's fair that they have a right of reply, so if they choose to do so I will add it to this post.
+ Finally, I've emailed the link to this to Professor Simonsohn seeking comment. It's fair that he has a right of reply, so if he chooses to do so I will add it to this post.
  
  It's a funny old world!
  

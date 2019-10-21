@@ -119,4 +119,4 @@ There's more to talk about here, but let's wrap it up.
  [^6]: It still would be, though
  [^7]: This acts as a deflator, penalising more complex models. To some extent, the Bayes factor follows Occam's Razor.
  [^8]: It's also not clear to me why there is a p value in this example
- [^9]: Here's wikipedia on the subject, a more substantial reference can be provided if needed: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
+ [^9]: Here's wikipedia on the subject, a more substantial reference can be provided if needed: [https://en.wikipedia.org/wiki/Statistical_hypothesis_testing]

@@ -68,18 +68,6 @@ How does a null hypothesis significance test work, then? It's kind of complex ye
 
 I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor.
 
-### False positives
-
-Cast your mind back to the very first example I talked about, and the risk of a false positive arising in a situation like that. Now look at this remark:
-
->In sum.
->
->...
->
->2\. Rejecting a theory after observing an outcome that the theory predicts.
-
-So the point being made here is that if you see evidence consistent with your hypothesis, it would be wrong to do anything other than treat your hypothesis as being supported by evidence. This is absolutely a recipe for false positives, for the correlation-versus-causation reasons discussed above among other things. Further, you don't need to use a Bayes factor in your investigations to make this mistake - all you need to do is have a confirmation bias. So this, and the other, recommendation that Professor Simonsohn makes about the use of the Bayes factor should be disregarded, in my view. There are problems with every framework, including the Bayesian one, but those problems aren't the ones that Professor Simonsohn talks about in his blog post.
-
 ### The tool isn't necessarily the problem
 
 Another problem with this article (repeated in [this one](http://datacolada.org/78c) as well), in my view, is that Professor Simonsohn seems to occasionally be prone to pointing the finger at tools rather than how they are used. For example:
@@ -99,6 +87,18 @@ I'm sure there are situations where the available data would make testing with a
 > It seems impossible to use a social science theory like supply and demand, to meaningfully generate such  numbers.
 
 should necessarily mean it's impossible for everyone. 
+
+### False positives
+
+Cast your mind back to the very first example I talked about, and the risk of a false positive arising in a situation like that. Now look at this remark:
+
+>In sum.
+>
+>...
+>
+>2\. Rejecting a theory after observing an outcome that the theory predicts.
+
+So the point being made here is that if you see evidence consistent with your hypothesis, it would be wrong to do anything other than treat your hypothesis as being supported by evidence. This is absolutely a recipe for false positives, for the correlation-versus-causation reasons discussed above among other things. Further, you don't need to use a Bayes factor in your investigations to make this mistake - all you need to do is have a confirmation bias. So this, and the other, recommendation that Professor Simonsohn makes about the use of the Bayes factor should be disregarded, in my view. There are problems with every framework, including the Bayesian one, but those problems aren't the ones that Professor Simonsohn talks about in his blog post.
 
 ### Final thoughts
 

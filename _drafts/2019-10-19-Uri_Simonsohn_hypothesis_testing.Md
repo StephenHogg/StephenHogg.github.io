@@ -44,7 +44,7 @@ To skip forward a little, Professor Simonsohn then provides this quote:
 
 > If it is sufficiently closer to 0%, we "accept" the null.
 
-This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn. This example was in quotation marks, but here are some other usages of it throughout the blog post:
+This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn.[^9] This example was in quotation marks, but here are some other usages of it throughout the blog post:
 
 > What would it take for you to conclude that the minimum wage does not increase unemployment? If you are like me, it would be something like this "if the estimated effect on unemployment were close enough to zero to rule out consequential effects, I will accept the null."
 
@@ -119,3 +119,4 @@ There's more to talk about here, but let's wrap it up.
  [^6]: It still would be, though
  [^7]: This acts as a deflator, penalising more complex models. To some extent, the Bayes factor follows Occam's Razor.
  [^8]: It's also not clear to me why there is a p value in this example
+ [^9]: Here's wikipedia on the subject, a more substantial reference can be provided if needed: https://en.wikipedia.org/wiki/Statistical_hypothesis_testing

@@ -44,7 +44,7 @@ To skip forward a little, Professor Simonsohn then provides this quote:
 
 > If it is sufficiently closer to 0%, we "accept" the null.
 
-This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn. Before anyone tries to get out of this one by saying it was in quotation marks, here are some other usages of it throughout the blog post:
+This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn. This example was in quotation marks, but here are some other usages of it throughout the blog post:
 
 > What would it take for you to conclude that the minimum wage does not increase unemployment? If you are like me, it would be something like this "if the estimated effect on unemployment were close enough to zero to rule out consequential effects, I will accept the null."
 
@@ -66,7 +66,7 @@ This wouldn't be as big of a deal if he were talking about a comparison of two t
 
 How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5] You're not supposed to ever reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
 
-I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor.
+I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor. The consequence of this, I think, is some of the other things identified in this post to do with over-eagerly embracing data that appears to validate a hypothesis. 
 
 ### The tool isn't necessarily the problem
 

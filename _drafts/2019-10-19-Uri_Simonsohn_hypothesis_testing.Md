@@ -38,7 +38,7 @@ Expanding further on the Bayes factor, Simonsohn says:
 
 This seems obviously wrong: "being pregnant" is not a hypothesis, null or alternative. If instead "being pregnant" is not what he means to be a hypothesis, then what does he think is? One of the easiest ways to wind up with methodological problems is to not actually spell out in black and white the necessary background to a given claim. So the Bayes factor is inaccurately defined without mention of the hypotheses it is testing in the previous quote and in this one he rejects the Bayes factor as unnecessarily complicated without providing any evidence to support that claim.
 
-### Fundamental misunderstanding of hypothesis testing
+### Potential misunderstanding of hypothesis testing
 
 To skip forward a little, Professor Simonsohn then provides this quote:
 

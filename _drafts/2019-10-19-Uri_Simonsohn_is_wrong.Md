@@ -32,8 +32,6 @@ $$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} = \frac{p(M_{1}|D)}{p(M_{0}
 
 As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture.[^7] Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour _or against_. What the above example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand. So it doesn't make sense to be talking about the Bayes factor in this puported example.
 
-Were the hypothesis to be something along the lines of "person X is pregnant", there would be two problems. The most obvious one is that people don't tend to take pregnancy tests unless they already suspect they're pregnant, making this example a faulty experiment. The second is that a person's pregnancy or otherwise is something that appears in the data in this case, thus obviating the need for any hypothesis.
-
 Expanding further on the Bayes factor, Simonsohn says:
 
 > The BF for the pregnancy test is simple because the alternative hypothesis involves only one possibility: "being pregnant". But BFs are usually complicated because the alternative hypotheses they consider include many possibilities.

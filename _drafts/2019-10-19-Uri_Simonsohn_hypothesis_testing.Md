@@ -26,17 +26,17 @@ To explain how the Bayes factor works, Simonsohn poses this example:
 
 > Bayes factors provide the results of a horse-race. They tell us how much more consistent the data are with an alternative hypothesis than with the null hypothesis. For example, if a pregnancy test is 10 times more likely to come up positive when pregnant than when not, then the Bayes factor is BF=10 for a positive result.
 
-He's kind of onto something with the horse race analogy, but otherwise this isn't quite right. Let's start with a definition of the Bayes Factor. According to page 165 of _Machine Learning_ by Kevin P. Murphy, it can be written as follows:
+He's kind of onto something with the horse race analogy, but otherwise I think this isn't quite right. Let's start with a definition of the Bayes Factor. According to page 165 of _Machine Learning_ by Kevin P. Murphy, it can be written as follows:
 
 $$ BF_{1,0} \triangleq \frac{p(D|M_{1})}{p(D|M_{0})} = \frac{p(M_{1}|D)}{p(M_{0}|D)} \Big/ \frac{p(M_{0})}{p(M_{1})}  $$
 
-As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture.[^7] Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour _or against_. What the above example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand. So it doesn't make sense to be talking about the Bayes factor in this puported example.
+As the book rightly points out, it's very similar to a likelihood ratio, but with the unconditional model probability removed from the picture.[^7] Let's now return to the explanation provided by Professor Simonsohn. What are the models being compared in this example? The simple answer is, none. If he had a working hypothesis along the lines of "taking a pregnancy test makes you pregnant", or something similar, the Bayes factor could be used to quantify the strength of evidence in favour _or against_. What the above example does is, again, provide a simple correlation. There's no outside theory actually being tested here, just a simple statement of facts derived from the data at hand.[^10] So it doesn't make sense to be talking about the Bayes factor in this puported example.
 
 Expanding further on the Bayes factor, Simonsohn says:
 
 > The BF for the pregnancy test is simple because the alternative hypothesis involves only one possibility: "being pregnant". But BFs are usually complicated because the alternative hypotheses they consider include many possibilities.
 
-This seems obviously wrong: "being pregnant" is not a hypothesis, null or alternative. If instead "being pregnant" is not what he means to be a hypothesis, then what does he think is? One of the easiest ways to wind up with methodological problems is to not actually spell out in black and white the necessary background to a given claim. So the Bayes factor is inaccurately defined without mention of the hypotheses it is testing in the previous quote and in this one he rejects the Bayes factor as unnecessarily complicated without providing any evidence to support that claim.
+This seems problematic: "being pregnant" is not a hypothesis, null or alternative. If instead "being pregnant" is not what he means to be a hypothesis, then what does he think is? One of the easiest ways to wind up with methodological problems is to not actually spell out in black and white the necessary background to a given claim. So the Bayes factor is inaccurately defined without mention of the hypotheses it is testing in the previous quote and in this one he rejects the Bayes factor as unnecessarily complicated without providing any evidence to support that claim.
 
 ### Potential misunderstanding of hypothesis testing
 
@@ -44,7 +44,7 @@ To skip forward a little, Professor Simonsohn then provides this quote:
 
 > If it is sufficiently closer to 0%, we "accept" the null.
 
-This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances and is the sort of thing first year math students are obliged to learn.[^9] This example was in quotation marks, but here are some other usages of it throughout the blog post:
+This is, unfortunately, categorically incorrect. "Accepting the null" is not one of the outcomes of a classical null hypothesis test under any circumstances.[^9] This example was in quotation marks, but here are some other usages of it throughout the blog post:
 
 > What would it take for you to conclude that the minimum wage does not increase unemployment? If you are like me, it would be something like this "if the estimated effect on unemployment were close enough to zero to rule out consequential effects, I will accept the null."
 
@@ -62,9 +62,9 @@ note that one doesn't reject an alternative hypothesis either, only the null. An
 
 and [another entire blog post](http://datacolada.org/42) (click for link) that is in fact entitled "Accepting the Null" and is all about when it's acceptable to do so.[^2]
 
-This wouldn't be as big of a deal if he were talking about a comparison of two theories without either having a privileged "null" position in the test.[^6] But he's talking (repeatedly), about a "null" hypothesis so it's hard not to conclude that he's thinking about all of this in terms of the classical null hypothesis significance test.
+This wouldn't be as big of a deal if he were talking about a comparison of two theories without either having a privileged "null" position in the test.[^6] But he's talking about a "null" hypothesis so it's hard not to conclude that he's thinking about all of this in terms of the classical null hypothesis significance test.
 
-How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5] You're not supposed to ever reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
+How does a null hypothesis significance test work, then? It's kind of complex yet straightforward. The overarching idea is that you're never actually 100% certain of anything, nor that one should change their mind without conclusive evidence suggesting that one do so.[^5] You're not supposed to ever reach a point whereby you're absolutely certain of what's going on and therefore never finally "accept" any theory. This is why the options available to the researcher in a classical null hypothesis test are "reject the null hypothesis" and "do not reject the null hypothesis", _and nothing else_. So it's kind of worrying that Professor Simonsohn is thinking (perhaps subconsciously or even accidentally) about hypothesis testing as a way of arriving at definitive proof instead of just as a way of gradually improving one's understanding of the world.
 
 I should note, this is not to say that the null hypothesis test framework as it stands is perfect. The point of the above is only that Professor Simonsohn is not operating correctly within the framework he's chosen to adopt for the purposes of talking about the Bayes factor. The consequence of this, I think, is the over-eager embrace data that appears to validate a hypothesis that occurs in his examples. 
 
@@ -80,7 +80,7 @@ Similarly in the example entitled "Thing 1", the problem appears to me to not be
 
 > All I have falsified is a hypothesis I considered only so that I could run the Bayes factor, one I was never interested in.
 
-Why is that a problem relating to the Bayes factor specifically? Structuring an investigation around the use of a specific test seems both unusual and not really to be recommended.[^8] In any event, I think this example would be a lot stronger if Professor Simonsohn actually tried and failed to perform a hypothesis test using the Bayes factor, thereby giving him the opportunity to point out specifically how he thinks the process doesn't work. As it is, he presents an arbitrary number with no grounding aside from the idea that it would be inconvient to have these results. Thought experiments are handy from time to time, but it seems like it would be better to use something more substantial to demonstrate the problems he perceives. 
+Why is that a problem relating to the Bayes factor specifically? Structuring an investigation around the use of a specific test seems both unusual and not really to be recommended.[^8] In any event, I think this example would be a lot stronger if Professor Simonsohn actually tried and failed to perform a hypothesis test using the Bayes factor, thereby giving him the opportunity to point out specifically how he thinks the process doesn't work. This thought experiment clearly attempts to do that, however the result is an arbitrary number with no grounding aside from the idea that it would be inconvient to have these results. Thought experiments are handy from time to time, but it seems like it would be better to use something more substantial to demonstrate the problems he perceives. 
 
 I'm sure there are situations where the available data would make testing with a Bayes factor trickier, but it doesn't seem obvious that an opinion such as:
 
@@ -106,7 +106,7 @@ So this, and the other, recommendation that Professor Simonsohn makes about the 
 
 There's more to talk about here, but let's wrap it up.
 
- After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simplest one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for the sake of what is absolutely an admirable change within his chosen field of research.
+ After talking with my nameless friend about all of this, he posed one simple question to me: seeing as he's been going since 2011, why hasn't he been called out for this stuff yet? The obvious answer seems like the simplest one to me - Uri Simonsohn is right. The audience he's talking to doesn't have a very good understanding of the fundamentals of scientific investigation, even though they should be expected to. This implies that mistakes he makes are less likely to be caught. Therefore, it seems advisable that he take greater care with his own advocacy for the sake of what is absolutely an admirable change within his chosen field of research.
  
  If you'd like some more reading about the Bayes factor that sheds greater light on the way hypothesis testing and Bayesian statistics work together, I heartily recommend [this presentation](https://modeling.uconn.edu/wp-content/uploads/sites/1188/2016/05/Bayes-Factor-Null-Hypothesis-Tests-are-still-Null-Hypothesis-Tests.pdf) from Matt Williams as a jumping-off point. Without being personally invested in Bayesian methodology (seeing as I don't use it much), I'm more than happy to point interested parties in the direction of more.
  
@@ -122,3 +122,4 @@ There's more to talk about here, but let's wrap it up.
  [^7]: This acts as a deflator, penalising more complex models. To some extent, the Bayes factor follows Occam's Razor.
  [^8]: It's also not clear to me why there is a p value in this example
  [^9]: Here's wikipedia on the subject, a more substantial reference can be provided if needed: <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>
+ [^10]: I'm happy to be enlightened on this subject, however

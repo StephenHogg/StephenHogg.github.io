@@ -2,7 +2,7 @@
 title: "About me"
 ---
 
-I'm Stephen and I live in Sydney. I'm the head of ML at [iSentia](http://www.isentia.com), but used to be an economist and before that an aspiring interpreter. Life is funny like that sometimes.
+I'm Stephen and I live in Sydney. I'm the Head of AI Systems at [Harrison.ai](https://www.harrison.ai). Before that, I was the Head of ML at [iSentia](http://www.isentia.com), and used to be an economist and before that an aspiring interpreter. Life is funny like that sometimes.
 
 I'm also one of the organisers of the [Sydney NLP Meetup](https://www.meetup.com/Sydney-Natural-Language-Processing-Meetup/), which you should definitely come along to and check out if you're in town!
 
